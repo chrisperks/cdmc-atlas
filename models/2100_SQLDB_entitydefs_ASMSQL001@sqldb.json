@@ -1,0 +1,21 @@
+{
+  "entity": {
+    "guid": "-1",
+    "typeName": "sqldb_instance",
+    "attributes": {
+      "name": "Azure SQL Managed (ASMSQL001)",
+      "qualifiedName": "ASMSQL001@sqldb",
+      "description": "Production managed SQL instance on Azure, for general purpose account, customer and contact databases",
+      "owner": "binmon@cdmc.sql",
+      "sqldb_type": "RDBMS (Managed)",
+      "platform": "Azure",
+      "cloudOrOnPrem": "Cloud",
+      "hostname": "euuxbcryct.database.windows.net",
+      "port": "1433",
+      "protocol": "TCP",
+      "contact_info": "Bill (binmon@cdmc.sql)",
+      "comment": "",
+      "createTime": 1607476058882
+    }
+  }
+}

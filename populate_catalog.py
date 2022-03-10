@@ -1,6 +1,7 @@
 import json
 
 from apache_atlas.client.base_client import AtlasClient
+from apache_atlas.model.instance import AtlasEntityWithExtInfo
 from apache_atlas.model.typedef import AtlasTypesDef, AtlasAttributeDef
 from apache_atlas.utils import type_coerce
 
@@ -88,26 +89,36 @@ def delete_type_defs(json_path):
     """
     Delete the typedefs
     """
+
+    type_defs = load_type_defs_from_json(json_path, False)
+
+    names_to_delete = []
+    names_to_delete.extend(
+        [type_def["name"] for type_def in type_defs.relationshipDefs]
+    )
+    names_to_delete.extend([type_def["name"] for type_def in type_defs.enumDefs])
+    names_to_delete.extend([type_def["name"] for type_def in type_defs.structDefs])
+    names_to_delete.extend(
+        [type_def["name"] for type_def in type_defs.classificationDefs]
+    )
+    names_to_delete.extend(
+        [type_def["name"] for type_def in type_defs.businessMetadataDefs]
+    )
+    names_to_delete.extend([type_def["name"] for type_def in type_defs.entityDefs])
+
+    for typedef_name in names_to_delete:
+        print("deleting " + typedef_name)
+        client.typedef.delete_type_by_name(typedef_name)
+
+
+def create_entities(json_path):
+    """
+    Create entities
+    """
     with open(json_path, encoding="utf-8") as f:
-        type_defs = load_type_defs_from_json(json_path, False)
-
-        names_to_delete = []
-        names_to_delete.extend(
-            [type_def["name"] for type_def in type_defs.relationshipDefs]
-        )
-        names_to_delete.extend([type_def["name"] for type_def in type_defs.enumDefs])
-        names_to_delete.extend([type_def["name"] for type_def in type_defs.structDefs])
-        names_to_delete.extend(
-            [type_def["name"] for type_def in type_defs.classificationDefs]
-        )
-        names_to_delete.extend(
-            [type_def["name"] for type_def in type_defs.businessMetadataDefs]
-        )
-        names_to_delete.extend([type_def["name"] for type_def in type_defs.entityDefs])
-
-        for typedef_name in names_to_delete:
-            print("deleting " + typedef_name)
-            client.typedef.delete_type_by_name(typedef_name)
+        entity = type_coerce(json.load(f), AtlasEntityWithExtInfo)
+        print("Creating or updating " + entity.entity.attributes["name"])
+        return client.entity.create_entity(entity)
 
 
 json_type_defs = [
@@ -116,9 +127,18 @@ json_type_defs = [
     "models/3500_Azure_ADLS_typedefs.json",
 ]
 
-# Create
+json_entity_defs = [
+    "models/2100_SQLDB_entitydefs_ASMSQL001@sqldb.json",
+    "models/2101_SQLDB_entitydefs_accounts_db@sqldb.json",
+]
+
+# Create Typedefs
 for path in json_type_defs:
     create_type_defs(path)
+
+# Create Entities
+for path in json_entity_defs:
+    create_entities(path)
 
 # Delete
 # for path in json_type_defs:

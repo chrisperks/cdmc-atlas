@@ -1,0 +1,24 @@
+{
+  "entity": {
+    "guid": "-1",
+    "typeName": "sqldb_db",
+    "attributes": {
+      "name": "Accounts DB",
+      "qualifiedName": "ASMSQL001.accountsdb@sqldb",
+      "description": "Database of accounts, customers and relationships",
+      "owner": "binmon@cdmc.sql",
+      "prodOrOther": "Production",
+      "contact_info": "Bill (binmon@cdmc.sql)",
+      "createTime": 1607476058882,
+      "instance": ""
+    },
+    "relationshipAttributes": {
+      "instance": {
+        "typeName": "sqldb_instance",
+        "uniqueAttributes": {
+          "qualifiedName": "ASMSQL001@sqldb"
+        }
+      }
+    }
+  }
+}
