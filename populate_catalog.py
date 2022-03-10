@@ -1,197 +1,125 @@
-import time
+import json
 
 from apache_atlas.client.base_client import AtlasClient
-from apache_atlas.model.instance import (
-    AtlasEntity,
-    AtlasEntityWithExtInfo,
-    AtlasEntitiesWithExtInfo,
-    AtlasRelatedObjectId,
-)
-from apache_atlas.model.enums import EntityOperation
+from apache_atlas.model.typedef import AtlasTypesDef, AtlasAttributeDef
+from apache_atlas.utils import type_coerce
 
-
-# Step 1: create a client to connect to Apache Atlas server
 client = AtlasClient("http://localhost:21000", ("admin", "admin"))
 
-# For Kerberos authentication, use HTTPKerberosAuth as shown below
-#
-# from requests_kerberos import HTTPKerberosAuth
-#
-# client = AtlasClient('http://localhost:21000', HTTPKerberosAuth())
 
-# to disable SSL certificate validation (not recommended for production use!)
-#
-# client.session.verify = False
+def load_type_defs_from_json(json_path, skip_existing=True):
+    """
+    Load defs from JSON
+    """
+    with open(json_path, encoding="utf-8") as f:
+        type_def = type_coerce(json.load(f), AtlasTypesDef)
 
+        types_to_create = AtlasTypesDef()
 
-# Step 2: Let's create a database entity
-test_db = AtlasEntity({"typeName": "hive_db"})
-test_db.attributes = {
-    "name": "test_db",
-    "clusterName": "prod",
-    "qualifiedName": "test_db@prod",
-}
+        types_to_create.enumDefs = []
+        types_to_create.structDefs = []
+        types_to_create.classificationDefs = []
+        types_to_create.entityDefs = []
+        types_to_create.relationshipDefs = []
+        types_to_create.businessMetadataDefs = []
 
-entity_info = AtlasEntityWithExtInfo()
-entity_info.entity = test_db
+        for enum_def in type_def.enumDefs:
+            if skip_existing and client.typedef.type_with_name_exists(enum_def.name):
+                print("Type with name %s already exists. Skipping.", enum_def.name)
+            else:
+                types_to_create.enumDefs.append(enum_def)
 
-print("Creating test_db")
+        for struct_def in type_def.structDefs:
+            if skip_existing and client.typedef.type_with_name_exists(struct_def.name):
+                print("Type with name %s already exists. Skipping.", struct_def.name)
+            else:
+                types_to_create.structDefs.append(struct_def)
 
-resp = client.entity.create_entity(entity_info)
+        for classification_def in type_def.classificationDefs:
+            if skip_existing and client.typedef.type_with_name_exists(
+                classification_def.name
+            ):
+                print(
+                    "Type with name %s already exists. Skipping.",
+                    classification_def.name,
+                )
+            else:
+                types_to_create.classificationDefs.append(classification_def)
 
-guid_db = resp.get_assigned_guid(test_db.guid)
+        for entity_def in type_def.entityDefs:
+            entity_def.attributeDefs.append(AtlasAttributeDef({}))
+            if skip_existing and client.typedef.type_with_name_exists(entity_def.name):
+                print("Type with name %s already exists. Skipping.", entity_def.name)
+            else:
+                types_to_create.entityDefs.append(entity_def)
 
-print("    created test_db: guid=" + guid_db)
+        for relationship_def in type_def.relationshipDefs:
+            if skip_existing and client.typedef.type_with_name_exists(
+                relationship_def.name
+            ):
+                print(
+                    "Type with name %s already exists. Skipping.", relationship_def.name
+                )
+            else:
+                types_to_create.relationshipDefs.append(relationship_def)
 
-
-# Step 3: Let's create a table entity, and two column entities - in one call
-test_tbl = AtlasEntity({"typeName": "hive_table"})
-test_tbl.attributes = {"name": "test_tbl", "qualifiedName": "test_db.test_tbl@prod"}
-test_tbl.relationshipAttributes = {"db": AtlasRelatedObjectId({"guid": guid_db})}
-
-test_col1 = AtlasEntity({"typeName": "hive_column"})
-test_col1.attributes = {
-    "name": "test_col1",
-    "type": "string",
-    "qualifiedName": "test_db.test_tbl.test_col1@prod",
-}
-test_col1.relationshipAttributes = {
-    "table": AtlasRelatedObjectId({"guid": test_tbl.guid})
-}
-
-test_col2 = AtlasEntity({"typeName": "hive_column"})
-test_col2.attributes = {
-    "name": "test_col2",
-    "type": "string",
-    "qualifiedName": "test_db.test_tbl.test_col2@prod",
-}
-test_col2.relationshipAttributes = {
-    "table": AtlasRelatedObjectId({"guid": test_tbl.guid})
-}
-
-entities_info = AtlasEntitiesWithExtInfo()
-entities_info.entities = [test_tbl, test_col1, test_col2]
-
-print("Creating test_tbl")
-
-resp = client.entity.create_entities(entities_info)
-
-guid_tbl = resp.get_assigned_guid(test_tbl.guid)
-guid_col1 = resp.get_assigned_guid(test_col1.guid)
-guid_col2 = resp.get_assigned_guid(test_col2.guid)
-
-print("    created test_tbl:           guid=" + guid_tbl)
-print("    created test_tbl.test_col1: guid=" + guid_col1)
-print("    created test_tbl.test_col2: guid=" + guid_col2)
+        for business_metadata_def in type_def.businessMetadataDefs:
+            if skip_existing and client.typedef.type_with_name_exists(
+                business_metadata_def.name
+            ):
+                print(
+                    "Type with name %s already exists. Skipping.",
+                    business_metadata_def.name,
+                )
+            else:
+                types_to_create.businessMetadataDefs.append(business_metadata_def)
+        return types_to_create
 
 
-# Step 4: Let's create a view entity that feeds from the table created earlier
-# Also create a lineage between the table and the view,
-# and lineages between their columns as well
-test_view = AtlasEntity({"typeName": "hive_table"})
-test_view.attributes = {"name": "test_view", "qualifiedName": "test_db.test_view@prod"}
-test_view.relationshipAttributes = {"db": AtlasRelatedObjectId({"guid": guid_db})}
-
-test_view_col1 = AtlasEntity({"typeName": "hive_column"})
-test_view_col1.attributes = {
-    "name": "test_col1",
-    "type": "string",
-    "qualifiedName": "test_db.test_view.test_col1@prod",
-}
-test_view_col1.relationshipAttributes = {
-    "table": AtlasRelatedObjectId({"guid": test_view.guid})
-}
-
-test_view_col2 = AtlasEntity({"typeName": "hive_column"})
-test_view_col2.attributes = {
-    "name": "test_col2",
-    "type": "string",
-    "qualifiedName": "test_db.test_view.test_col2@prod",
-}
-test_view_col2.relationshipAttributes = {
-    "table": AtlasRelatedObjectId({"guid": test_view.guid})
-}
-
-test_process = AtlasEntity({"typeName": "hive_process"})
-test_process.attributes = {
-    "name": "create_test_view",
-    "userName": "admin",
-    "operationType": "CREATE",
-    "qualifiedName": "create_test_view@prod",
-}
-test_process.attributes["queryText"] = "create view test_view as select * from test_tbl"
-test_process.attributes["queryPlan"] = "<queryPlan>"
-test_process.attributes["queryId"] = "<queryId>"
-test_process.attributes["startTime"] = int(time.time() * 1000)
-test_process.attributes["endTime"] = int(time.time() * 1000)
-test_process.relationshipAttributes = {
-    "inputs": [AtlasRelatedObjectId({"guid": guid_tbl})],
-    "outputs": [AtlasRelatedObjectId({"guid": test_view.guid})],
-}
-
-test_col1_lineage = AtlasEntity({"typeName": "hive_column_lineage"})
-test_col1_lineage.attributes = {
-    "name": "test_view.test_col1 lineage",
-    "depenendencyType": "read",
-    "qualifiedName": "test_db.test_view.test_col1@prod",
-}
-test_col1_lineage.attributes["query"] = {"guid": test_process.guid}
-test_col1_lineage.relationshipAttributes = {
-    "inputs": [AtlasRelatedObjectId({"guid": guid_col1})],
-    "outputs": [AtlasRelatedObjectId({"guid": test_view_col1.guid})],
-}
-
-test_col2_lineage = AtlasEntity({"typeName": "hive_column_lineage"})
-test_col2_lineage.attributes = {
-    "name": "test_view.test_col2 lineage",
-    "depenendencyType": "read",
-    "qualifiedName": "test_db.test_view.test_col2@prod",
-}
-test_col2_lineage.attributes["query"] = {"guid": test_process.guid}
-test_col2_lineage.relationshipAttributes = {
-    "inputs": [AtlasRelatedObjectId({"guid": guid_col2})],
-    "outputs": [AtlasRelatedObjectId({"guid": test_view_col2.guid})],
-}
-
-entities_info = AtlasEntitiesWithExtInfo()
-entities_info.entities = [test_process, test_col1_lineage, test_col2_lineage]
-
-entities_info.add_referenced_entity(test_view)
-entities_info.add_referenced_entity(test_view_col1)
-entities_info.add_referenced_entity(test_view_col2)
-
-print("Creating test_view")
-
-resp = client.entity.create_entities(entities_info)
-
-guid_view = resp.get_assigned_guid(test_view.guid)
-guid_view_col1 = resp.get_assigned_guid(test_view_col1.guid)
-guid_view_col2 = resp.get_assigned_guid(test_view_col2.guid)
-guid_process = resp.get_assigned_guid(test_process.guid)
-guid_col1_lineage = resp.get_assigned_guid(test_col1_lineage.guid)
-guid_col2_lineage = resp.get_assigned_guid(test_col2_lineage.guid)
-
-print("    created test_view:           guid=" + guid_view)
-print("    created test_view.test_col1: guid=" + guid_view_col1)
-print("    created test_view.test_col2: guid=" + guid_view_col1)
-print("    created test_view lineage:   guid=" + guid_process)
-print("    created test_col1 lineage:   guid=" + guid_col1_lineage)
-print("    created test_col2 lineage:   guid=" + guid_col2_lineage)
+def create_type_defs(json_path):
+    """
+    Create the typedefs
+    """
+    types_to_create = load_type_defs_from_json(json_path)
+    return client.typedef.create_atlas_typedefs(types_to_create)
 
 
-# Step 5: Finally, cleanup by deleting entities created above
-print("Deleting entities")
+def delete_type_defs(json_path):
+    """
+    Delete the typedefs
+    """
+    with open(json_path, encoding="utf-8") as f:
+        type_defs = load_type_defs_from_json(json_path, False)
 
-resp = client.entity.delete_entities_by_guids(
-    [guid_col1_lineage, guid_col2_lineage, guid_process, guid_view, guid_tbl, guid_db]
-)
+        names_to_delete = []
+        names_to_delete.extend(
+            [type_def["name"] for type_def in type_defs.relationshipDefs]
+        )
+        names_to_delete.extend([type_def["name"] for type_def in type_defs.enumDefs])
+        names_to_delete.extend([type_def["name"] for type_def in type_defs.structDefs])
+        names_to_delete.extend(
+            [type_def["name"] for type_def in type_defs.classificationDefs]
+        )
+        names_to_delete.extend(
+            [type_def["name"] for type_def in type_defs.businessMetadataDefs]
+        )
+        names_to_delete.extend([type_def["name"] for type_def in type_defs.entityDefs])
 
-deleted_count = (
-    len(resp.mutatedEntities[EntityOperation.DELETE.name])
-    if resp
-    and resp.mutatedEntities
-    and EntityOperation.DELETE.name in resp.mutatedEntities
-    else 0
-)
+        for typedef_name in names_to_delete:
+            print("deleting " + typedef_name)
+            client.typedef.delete_type_by_name(typedef_name)
 
-print("    " + str(deleted_count) + " entities deleted")
+
+json_type_defs = [
+    "models/2000_SQLDB_typedefs.json",
+    "models/3000_AWS_S3_typedefs.json",
+    "models/3500_Azure_ADLS_typedefs.json",
+]
+
+# Create
+for path in json_type_defs:
+    create_type_defs(path)
+
+# Delete
+# for path in json_type_defs:
+#     delete_type_defs(path)
