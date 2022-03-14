@@ -1,0 +1,508 @@
+{
+  "entity": {
+    "guid": "-1",
+    "typeName": "sqldb_table",
+    "attributes": {
+      "name": "accounts",
+      "description": "Business that represents a customer or potential customer. The company that is billed in business transactions.",
+      "qualifiedName": "accountsdb.accounts@sqldb",
+      "name_path": "accountsdb.accounts@sqldb",
+      "createTime": 1607476058882,
+      "comment": "",
+      "type": "Managed",
+      "contact_info": "Chris (cperks@cdmc.sql)"
+    },
+    "relationshipAttributes": {
+      "db": {
+        "typeName": "sqldb_db",
+        "uniqueAttributes": {
+          "qualifiedName": "ASMSQL001.accountsdb@sqldb"
+        }
+      },
+      "columns": [
+        {
+          "guid": "-2"
+        },
+        {
+          "guid": "-3"
+        },
+        {
+          "guid": "-4"
+        },
+        {
+          "guid": "-5"
+        },
+        {
+          "guid": "-6"
+        },
+        {
+          "guid": "-7"
+        },
+        {
+          "guid": "-8"
+        },
+        {
+          "guid": "-9"
+        },
+        {
+          "guid": "-10"
+        },
+        {
+          "guid": "-11"
+        },
+        {
+          "guid": "-12"
+        },
+        {
+          "guid": "-13"
+        },
+        {
+          "guid": "-14"
+        },
+        {
+          "guid": "-15"
+        },
+        {
+          "guid": "-16"
+        },
+        {
+          "guid": "-17"
+        },
+        {
+          "guid": "-18"
+        },
+        {
+          "guid": "-19"
+        },
+        {
+          "guid": "-20"
+        },
+        {
+          "guid": "-21"
+        },
+        {
+          "guid": "-22"
+        },
+        {
+          "guid": "-23"
+        },
+        {
+          "guid": "-24"
+        },
+        {
+          "guid": "-25"
+        }
+      ]
+    }
+  },
+  "referredEntities": {
+    "-2": {
+      "guid": "-2",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "accountId",
+        "data_type": "entityId",
+        "length": 255,
+        "default_value": "",
+        "comment": "Unique identifier of the account.",
+        "isNullable": false,
+        "isPrimaryKey": true,
+        "qualifiedName": "accountsdb.accounts.accountid@sqldb"
+      }
+    },
+    "-3": {
+      "guid": "-3",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "accountCategoryCode",
+        "data_type": "listLookup",
+        "length": 255,
+        "default_value": "",
+        "comment": "Category to indicate whether the customer account is standard or preferred.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.accounts.accountcategorycode@sqldb"
+      }
+    },
+    "-4": {
+      "guid": "-4",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "preferredContactMethodCode",
+        "data_type": "listLookup",
+        "length": 255,
+        "default_value": "",
+        "comment": "Preferred Method of Contact",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.accounts.preferredcontactmethodcode@sqldb"
+      }
+    },
+    "-5": {
+      "guid": "-5",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "customerTypeCode",
+        "data_type": "listLookup",
+        "length": 255,
+        "default_value": "",
+        "comment": "Category that best describes the relationship between the account and your organization.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.accounts.customertypecode@sqldb"
+      }
+    },
+    "-6": {
+      "guid": "-6",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "accountRatingCode",
+        "data_type": "listLookup",
+        "length": 255,
+        "default_value": "",
+        "comment": "Rating to indicate the value of the customer account.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.accounts.accountratingcode@sqldb"
+      }
+    },
+    "-7": {
+      "guid": "-7",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "industryCode",
+        "data_type": "listLookup",
+        "length": 255,
+        "default_value": "",
+        "comment": "Account's primary industry for use in marketing segmentation and demographic analysis.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.accounts.industrycode@sqldb"
+      }
+    },
+    "-8": {
+      "guid": "-8",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "territoryCode",
+        "data_type": "listLookup",
+        "length": 255,
+        "default_value": "",
+        "comment": "Region or territory for the account for use in segmentation and analysis.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.accounts.territorycode@sqldb"
+      }
+    },
+    "-9": {
+      "guid": "-9",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "accountClassificationCode",
+        "data_type": "listLookup",
+        "length": 255,
+        "default_value": "",
+        "comment": "Classification code to indicate the potential value of the customer account based on the projected return on investment, cooperation level, sales cycle length or other criteria.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.accounts.accountclassificationcode@sqldb"
+      }
+    },
+    "-10": {
+      "guid": "-10",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "businessTypeCode",
+        "data_type": "listLookup",
+        "length": 255,
+        "default_value": "",
+        "comment": "Legal designation or other business type of the account for contracts or reporting purposes.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.accounts.businesstypecode@sqldb"
+      }
+    },
+    "-11": {
+      "guid": "-11",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "paymentTermsCode",
+        "data_type": "listLookup",
+        "length": 255,
+        "default_value": "",
+        "comment": "Payment terms to indicate when the customer needs to pay the total amount.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.accounts.paymenttermscode@sqldb"
+      }
+    },
+    "-12": {
+      "guid": "-12",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "shippingMethodCode",
+        "data_type": "listLookup",
+        "length": 255,
+        "default_value": "",
+        "comment": "Shipping method for deliveries sent to the account's address to designate the preferred carrier or other delivery option.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.accounts.shippingmethodcode@sqldb"
+      }
+    },
+    "-13": {
+      "guid": "-13",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "name",
+        "data_type": "string",
+        "length": 160,
+        "default_value": "",
+        "comment": "The company or business name.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.accounts.name@sqldb"
+      }
+    },
+    "-14": {
+      "guid": "-14",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "accountNumber",
+        "data_type": "listLookup",
+        "length": 20,
+        "default_value": "",
+        "comment": "ID number or code for the account to quickly search and identify the account in system views.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.accounts.accountnumber@sqldb"
+      }
+    },
+    "-15": {
+      "guid": "-15",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "revenue",
+        "data_type": "currency",
+        "length": 1000000,
+        "default_value": "",
+        "comment": "Annual revenue for the account, used as an indicator in financial performance analysis.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.accounts.revenue@sqldb"
+      }
+    },
+    "-16": {
+      "guid": "-16",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "numberOfEmployees",
+        "data_type": "integer",
+        "length": 255,
+        "default_value": "",
+        "comment": "Number of employees that work at the account for use in marketing segmentation and demographic analysis.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.accounts.numberofemployees@sqldb"
+      }
+    },
+    "-17": {
+      "guid": "-17",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "description",
+        "data_type": "string",
+        "length": 2000,
+        "default_value": "",
+        "comment": "Additional information to describe the account, such as an excerpt from the company's website.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.accounts.description@sqldb"
+      }
+    },
+    "-18": {
+      "guid": "-18",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "marketCap",
+        "data_type": "currency",
+        "length": 100000,
+        "default_value": "",
+        "comment": "Market capitalization of the account to identify the company's equity, used as an indicator in financial performance analysis.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.accounts.marketcap@sqldb"
+      }
+    },
+    "-19": {
+      "guid": "-19",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "tickerSymbol",
+        "data_type": "string",
+        "length": 10,
+        "default_value": "",
+        "comment": "Stock exchange symbol for the account to track financial performance of the company. You can click the code entered in this field to access the latest trading information from MSN Money.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.accounts.tickersymbol@sqldb"
+      }
+    },
+    "-20": {
+      "guid": "-20",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "stockExchange",
+        "data_type": "string",
+        "length": 20,
+        "default_value": "",
+        "comment": "Stock exchange at which the account is listed to track their stock and financial performance of the company.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.accounts.stockexchange@sqldb"
+      }
+    },
+    "-21": {
+      "guid": "-21",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "webSiteUrl",
+        "data_type": "string",
+        "length": 200,
+        "default_value": "",
+        "comment": "The account's website URL to get quick details about the company profile.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.accounts.websiteurl@sqldb"
+      }
+    },
+    "-22": {
+      "guid": "-22",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "EMailAddress1",
+        "data_type": "email",
+        "length": 255,
+        "default_value": "",
+        "comment": "Primary email address for the account.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.accounts.emailaddress1@sqldb"
+      }
+    },
+    "-23": {
+      "guid": "-23",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "EMailAddress2",
+        "data_type": "email",
+        "length": 255,
+        "default_value": "",
+        "comment": "Secondary email address for the account.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.accounts.emailaddress2@sqldb"
+      }
+    },
+    "-24": {
+      "guid": "-24",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "doNotEMail",
+        "data_type": "boolean",
+        "length": 1,
+        "default_value": false,
+        "comment": "Whether the account allows direct email",
+        "isNullable": false,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.accounts.donotemail@sqldb"
+      }
+    },
+    "-25": {
+      "guid": "-25",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "statusCode",
+        "data_type": "listLookup",
+        "length": 20,
+        "default_value": "",
+        "comment": "Account's status.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.accounts.statuscode@sqldb"
+      }
+    }
+  }
+}

@@ -1,0 +1,248 @@
+{
+  "entity": {
+    "guid": "-1",
+    "typeName": "sqldb_table",
+    "attributes": {
+      "name": "address",
+      "description": "Address and shipping information. Used to store additional addresses for an account or contact.",
+      "qualifiedName": "accountsdb.address@sqldb",
+      "name_path": "accountsdb.address@sqldb",
+      "createTime": 1607476058882,
+      "comment": "",
+      "type": "Managed",
+      "contact_info": "Chris (cperks@cdmc.sql)"
+    },
+    "relationshipAttributes": {
+      "db": {
+        "typeName": "sqldb_db",
+        "uniqueAttributes": {
+          "qualifiedName": "ASMSQL001.accountsdb@sqldb"
+        }
+      },
+      "columns": [
+        {
+          "guid": "-2"
+        },
+        {
+          "guid": "-3"
+        },
+        {
+          "guid": "-4"
+        },
+        {
+          "guid": "-5"
+        },
+        {
+          "guid": "-6"
+        },
+        {
+          "guid": "-7"
+        },
+        {
+          "guid": "-8"
+        },
+        {
+          "guid": "-9"
+        },
+        {
+          "guid": "-10"
+        },
+        {
+          "guid": "-11"
+        },
+        {
+          "guid": "-12"
+        }
+      ]
+    }
+  },
+  "referredEntities": {
+    "-2": {
+      "guid": "-2",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "customerAddressId",
+        "data_type": "entityId",
+        "length": 255,
+        "default_value": "",
+        "comment": "Unique identifier of the customer address.",
+        "isNullable": false,
+        "isPrimaryKey": true,
+        "qualifiedName": "accountsdb.address.customeraddressid@sqldb"
+      }
+    },
+    "-3": {
+      "guid": "-3",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "addressTypeCode",
+        "data_type": "listLookup",
+        "length": 255,
+        "default_value": "",
+        "comment": "Address type, such as primary or billing.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.address.addresstypecode@sqldb"
+      }
+    },
+    "-4": {
+      "guid": "-4",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "name",
+        "data_type": "string",
+        "length": 255,
+        "default_value": "",
+        "comment": "Descriptive name for the customer's address, such as Corporate Headquarters.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.address.name@sqldb"
+      }
+    },
+    "-5": {
+      "guid": "-5",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "primaryContactName",
+        "data_type": "string",
+        "length": 255,
+        "default_value": "",
+        "comment": "Name of the primary contact person for the customer's address.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.address.primarycontactname@sqldb"
+      }
+    },
+    "-6": {
+      "guid": "-6",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "line1",
+        "data_type": "string",
+        "length": 255,
+        "default_value": "",
+        "comment": "First line of the customer's address to help identify the location.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.address.line1@sqldb"
+      }
+    },
+    "-7": {
+      "guid": "-7",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "line2",
+        "data_type": "string",
+        "length": 255,
+        "default_value": "",
+        "comment": "Second line of the customer's address.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.address.line2@sqldb"
+      }
+    },
+    "-8": {
+      "guid": "-8",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "city",
+        "data_type": "string",
+        "length": 255,
+        "default_value": "",
+        "comment": "City for the customer's address to help identify the location.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.address.city@sqldb"
+      }
+    },
+    "-9": {
+      "guid": "-9",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "stateOrProvince",
+        "data_type": "string",
+        "length": 255,
+        "default_value": "",
+        "comment": "State or province of the customer's address.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.address.stateOrProvince@sqldb"
+      }
+    },
+    "-10": {
+      "guid": "-10",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "country",
+        "data_type": "string",
+        "length": 255,
+        "default_value": "",
+        "comment": "Country or region for the customer's address.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.address.country@sqldb"
+      }
+    },
+    "-11": {
+      "guid": "-11",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "postalCode",
+        "data_type": "string",
+        "length": 20,
+        "default_value": "",
+        "comment": "ZIP Code or postal code for the address.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.address.postalCode@sqldb"
+      }
+    },
+    "-12": {
+      "guid": "-12",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "UTCOffset",
+        "data_type": "timezone",
+        "length": 255,
+        "default_value": "",
+        "comment": "Time zone for the address.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.address.utcoffset@sqldb"
+      }
+    }
+  }
+}

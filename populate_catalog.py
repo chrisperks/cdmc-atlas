@@ -118,7 +118,9 @@ def create_entities(json_path):
     with open(json_path, encoding="utf-8") as f:
         entity = type_coerce(json.load(f), AtlasEntityWithExtInfo)
         print("Creating or updating " + entity.entity.attributes["name"])
+
         return client.entity.create_entity(entity)
+        # return client.entity.update_entity(entity)
 
 
 json_type_defs = [
@@ -130,6 +132,8 @@ json_type_defs = [
 json_entity_defs = [
     "models/2100_SQLDB_entitydefs_ASMSQL001@sqldb.json",
     "models/2101_SQLDB_entitydefs_accounts_db@sqldb.json",
+    "models/2110_SQLDB_entitydefs_accounts_account_table@sqldb.json",
+    "models/2111_SQLDB_entitydefs_accounts_address_table@sqldb.json",
 ]
 
 # Create Typedefs
