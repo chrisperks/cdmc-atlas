@@ -2,6 +2,11 @@ import json
 
 from apache_atlas.client.base_client import AtlasClient
 from apache_atlas.model.instance import AtlasEntityWithExtInfo
+from apache_atlas.model.glossary import (
+    AtlasGlossary,
+    AtlasGlossaryHeader,
+    AtlasGlossaryTerm,
+)
 from apache_atlas.model.typedef import AtlasTypesDef, AtlasAttributeDef
 from apache_atlas.utils import type_coerce
 
@@ -118,9 +123,34 @@ def create_entities(json_path):
     with open(json_path, encoding="utf-8") as f:
         entity = type_coerce(json.load(f), AtlasEntityWithExtInfo)
         print("Creating or updating " + entity.entity.attributes["name"])
-
         return client.entity.create_entity(entity)
-        # return client.entity.update_entity(entity)
+
+
+def create_glossary(json_path):
+    """
+    Create glossary
+    """
+    with open(json_path, encoding="utf-8") as f:
+
+        raw_json = json.load(f)
+        glossary = type_coerce(raw_json, AtlasGlossary)
+        terms = [type_coerce(x, AtlasGlossaryTerm) for x in raw_json["terms"]]
+
+        for existing_glossary in client.glossary.get_all_glossaries():
+            if existing_glossary["name"] == glossary.name:
+                client.glossary.delete_glossary_by_guid(existing_glossary["guid"])
+
+        print("Creating or updating " + glossary.name)
+        new_glossary = client.glossary.create_glossary(glossary)
+
+        shared_glossary_header = AtlasGlossaryHeader()
+        shared_glossary_header.glossaryGuid = new_glossary.guid
+        shared_glossary_header.displayText = glossary.name
+
+        for term in terms:
+            term.anchor = shared_glossary_header
+
+        client.glossary.create_glossary_terms(terms)
 
 
 json_type_defs = [
@@ -134,7 +164,24 @@ json_entity_defs = [
     "models/2101_SQLDB_entitydefs_accounts_db@sqldb.json",
     "models/2110_SQLDB_entitydefs_accounts_account_table@sqldb.json",
     "models/2111_SQLDB_entitydefs_accounts_address_table@sqldb.json",
+    "models/2112_SQLDB_entitydefs_accounts_contact_table@sqldb.json",
+    "models/2113_SQLDB_entitydefs_accounts_socialprofile_table@sqldb.json",
+    "models/2150_SQLDB_entitydefs_communications_db@sqldb.json",
+    "models/2151_SQLDB_entitydefs_communications_article_table@sqldb.json",
+    "models/3101_AWS_entitydefs_bucket_email@aws.json",
+    "models/3102_AWS_entitydefs_bucket_fax@aws.json",
+    "models/3103_AWS_entitydefs_bucket_feedback@aws.json",
+    "models/3104_AWS_entitydefs_bucket_note@aws.json",
+    "models/3105_AWS_entitydefs_bucket_letter@aws.json",
+    "models/3106_AWS_entitydefs_bucket_phonecall@aws.json",
+    "models/3107_AWS_entitydefs_bucket_socialactivity@aws.json",
+    "models/3110_AWS_entitydefs_bucket_communications_merged@aws.json",
+    "models/3111_AWS_entitydefs_bucket_communications_cleaned@aws.json",
+    "models/3200_AWS_entitydefs_hourly_s3_comms_merge@aws.json",
+    "models/3201_AWS_entitydefs_hourly_s3_comms_clean@aws.json",
 ]
+
+json_glossary_defs = ["models/4000_Glossary_EDM_DCAM.json"]
 
 # Create Typedefs
 for path in json_type_defs:
@@ -144,6 +191,6 @@ for path in json_type_defs:
 for path in json_entity_defs:
     create_entities(path)
 
-# Delete
-# for path in json_type_defs:
-#     delete_type_defs(path)
+# Create Glossaries
+# for path in json_glossary_defs:
+#     create_glossary(path)

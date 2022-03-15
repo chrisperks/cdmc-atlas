@@ -1,0 +1,328 @@
+{
+  "entity": {
+    "guid": "-1",
+    "typeName": "sqldb_table",
+    "attributes": {
+      "name": "contact",
+      "description": "Person with whom a business unit has a relationship, such as customer, supplier, and colleague.",
+      "qualifiedName": "accountsdb.contact@sqldb",
+      "name_path": "accountsdb.contact@sqldb",
+      "createTime": 1607476058882,
+      "comment": "",
+      "type": "Managed",
+      "contact_info": "Chris (cperks@cdmc.sql)"
+    },
+    "relationshipAttributes": {
+      "db": {
+        "typeName": "sqldb_db",
+        "uniqueAttributes": {
+          "qualifiedName": "ASMSQL001.accountsdb@sqldb"
+        }
+      },
+      "columns": [
+        {
+          "guid": "-2"
+        },
+        {
+          "guid": "-3"
+        },
+        {
+          "guid": "-4"
+        },
+        {
+          "guid": "-5"
+        },
+        {
+          "guid": "-6"
+        },
+        {
+          "guid": "-7"
+        },
+        {
+          "guid": "-8"
+        },
+        {
+          "guid": "-9"
+        },
+        {
+          "guid": "-10"
+        },
+        {
+          "guid": "-11"
+        },
+        {
+          "guid": "-12"
+        },
+        {
+          "guid": "-13"
+        },
+        {
+          "guid": "-14"
+        },
+        {
+          "guid": "-15"
+        },
+        {
+          "guid": "-16"
+        }
+      ]
+    }
+  },
+  "referredEntities": {
+    "-2": {
+      "guid": "-2",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "contactId",
+        "data_type": "entityId",
+        "length": 255,
+        "default_value": "",
+        "comment": "Unique identifier of contact.",
+        "isNullable": false,
+        "isPrimaryKey": true,
+        "qualifiedName": "accountsdb.contact.contactid@sqldb"
+      }
+    },
+    "-3": {
+      "guid": "-3",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "customerSizeCode",
+        "data_type": "listLookup",
+        "length": 255,
+        "default_value": "",
+        "comment": "Size of the contact's company for segmentation and reporting purposes.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.contact.customersizecode@sqldb"
+      }
+    },
+    "-4": {
+      "guid": "-4",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "customerTypeCode",
+        "data_type": "listLookup",
+        "length": 255,
+        "default_value": "",
+        "comment": "Category that best describes the relationship between the contact and your organization.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.contact.customertypecode@sqldb"
+      }
+    },
+    "-5": {
+      "guid": "-5",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "preferredContactMethodCode",
+        "data_type": "listLookup",
+        "length": 255,
+        "default_value": "",
+        "comment": "Preferred Method of Contact.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.contact.preferredcontactmethodcode@sqldb"
+      }
+    },
+    "-6": {
+      "guid": "-6",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "isBackofficeCustomer",
+        "data_type": "boolean",
+        "length": 1,
+        "default_value": "",
+        "comment": "Whether the contact exists in a separate accounting or other system, such as Microsoft Dynamics GP or another ERP database, for use in integration processes.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.contact.isbackofficecustomer@sqldb"
+      }
+    },
+    "-7": {
+      "guid": "-7",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "jobTitle",
+        "data_type": "string",
+        "length": 255,
+        "default_value": "",
+        "comment": "Job title of the contact to make sure the contact is addressed correctly in sales calls, email, and marketing campaigns.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.contact.jobtitle@sqldb"
+      }
+    },
+    "-8": {
+      "guid": "-8",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "firstName",
+        "data_type": "string",
+        "length": 255,
+        "default_value": "",
+        "comment": "Contact's first name to make sure the contact is addressed correctly in sales calls, email, and marketing campaigns.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.contact.firstname@sqldb"
+      }
+    },
+    "-9": {
+      "guid": "-9",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "department",
+        "data_type": "string",
+        "length": 255,
+        "default_value": "",
+        "comment": "Department or business unit where the contact works in the parent company or business.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.contact.department@sqldb"
+      }
+    },
+    "-10": {
+      "guid": "-10",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "nickName",
+        "data_type": "string",
+        "length": 255,
+        "default_value": "",
+        "comment": "Contact's nickname.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.contact.nickname@sqldb"
+      }
+    },
+    "-11": {
+      "guid": "-11",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "lastName",
+        "data_type": "string",
+        "length": 20,
+        "default_value": "",
+        "comment": "Contact's last name to make sure the contact is addressed correctly in sales calls, email, and marketing campaigns.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.contact.lastname@sqldb"
+      }
+    },
+    "-12": {
+      "guid": "-12",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "employeeId",
+        "data_type": "string",
+        "length": 255,
+        "default_value": "",
+        "comment": "Employee ID or number for the contact for reference in orders, service cases, or other communications with the contact's organization.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.contact.employeeid@sqldb"
+      }
+    },
+    "-13": {
+      "guid": "-13",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "annualIncome",
+        "data_type": "currency",
+        "length": 255,
+        "default_value": "",
+        "comment": "Contact's annual income for use in profiling and financial analysis.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.contact.annualincome@sqldb"
+      }
+    },
+    "-14": {
+      "guid": "-14",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "birthDate",
+        "data_type": "dateTime",
+        "length": 255,
+        "default_value": "",
+        "comment": "Contact's birthday for use in customer gift programs or other communications.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.contact.birthdate@sqldb"
+      }
+    },
+    "-15": {
+      "guid": "-15",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "EMailAddress1",
+        "data_type": "string",
+        "length": 255,
+        "default_value": "",
+        "comment": "Primary email address for the contact.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.contact.emailaddress1@sqldb"
+      }
+    },
+    "-16": {
+      "guid": "-16",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "creditLimit",
+        "data_type": "currency",
+        "length": 255,
+        "default_value": "",
+        "comment": "Credit limit of the contact for reference when you address invoice and accounting issues with the customer.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.contact.creditlimit@sqldb"
+      }
+    }
+  }
+}

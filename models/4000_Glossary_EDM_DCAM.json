@@ -1,0 +1,1124 @@
+{
+  "terms": [
+    {
+      "displayText": "Accuracy",
+      "qualifiedName": "glossary_dcam_accuracy",
+      "name": "Accuracy",
+      "shortDescription": "A measurement of the conformity to facts of data to its authoritative source.",
+      "longDescription": "Accuracy is a measurement of the precision of data.  It can be measured against either original documents or authoritative sources and validated against defined business rules.  Accuracy is one of the seven data quality dimensions.\n\nExamples:\n- Records that are wrong at a specified time (e.g., a record with an incorrect maturity date)\n- Records that haven't been refreshed or updated\n- Records at the wrong level of precision (e.g., prices that were originally quoted at three decimal places, but cut-off and stored at two decimal places)",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Atomic Data",
+      "qualifiedName": "glossary_dcam_atomic_data",
+      "name": "Atomic Data",
+      "shortDescription": "Lowest level of detail, factual meaning. (e.g., Interest Rate)",
+      "longDescription": "",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Authoritative Data Domain",
+      "qualifiedName": "glossary_dcam_authoritative_data_domain",
+      "name": "Authoritative Data Domain",
+      "shortDescription": "A data domain that has been designated, verified, approved and enforced by the data management governing body.",
+      "longDescription": "",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Authoritative Data Source",
+      "qualifiedName": "glossary_dcam_authoritative_data_source",
+      "name": "Authoritative Data Source",
+      "shortDescription": "An officially designated system or repository for data that has been determined to be reliable and accurate.",
+      "longDescription": "An authoritative data source has been designated by the data management governing body as the official source of a specific data domain.  Required use of the authorized source is driven by established policy and standards.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Authoritative Provisioning Point",
+      "qualifiedName": "glossary_dcam_authoritative_provisioning_point",
+      "name": "Authoritative Provisioning Point",
+      "shortDescription": "A provisioning point that has been designated by the relevant data management governing body as providing data from an authoritative data domain.",
+      "longDescription": "Authoritative provisioning points are designated by the organization�s governing body after the content has been rationalized against internal data engineering standards for meaning, structure and format. As part of that designation the provisioning point includes adequate data controls to ensure data remains fit-for-purpose.   Best practice is that an authoritative provisioning point would be registered in the enterprise provisioning registry.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Authoritative Provisioning Point Manager",
+      "qualifiedName": "glossary_dcam_authoritative_provisioning_point_manager",
+      "name": "Authoritative Provisioning Point Manager",
+      "shortDescription": "An individual technologist (e.g., technical application manager) responsible for the environment to aggregate and transform data into conformed meaning for distribution to the operating unit and data consumers.",
+      "longDescription": "Alignment is to the respective technology manager in the Chief Information Officer or Chief Technology Officer organization of the enterprise.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Business Architecture",
+      "qualifiedName": "glossary_dcam_business_architecture",
+      "name": "Business Architecture",
+      "shortDescription": "The strategy, design and execution of the capabilities needed to support the enterprise business functions.",
+      "longDescription": "Business architecture is one of the subcomponents of enterprise architecture.  It is important to have integration between business architecture, data architecture and technology architecture. \n\nBusiness architecture includes:\n- Capability models\n- Process models/flows\n- Business objectives\n- Architectural roadmaps",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Business Data Stewardship",
+      "qualifiedName": "glossary_dcam_business_data_stewardship",
+      "name": "Business Data Stewardship",
+      "shortDescription": "The function that implements and/or executes the data management initiative for its respective business data domain(s).",
+      "longDescription": "The business data stewardship function must understand the business and data manufacturing processes to ensure that the data is fit for its intended purposes.  The function includes, but is not limited to:\n- Defining and establishing the domain boundaries in collaboration with peer Business Data Stewards\n- Ensuring that all data management processes comply with organizational policy and standards\n- Capturing and verify data requirements in collaboration with data consumers\n- Source and provision data for use by business or other consuming applications\n- Ensuring that data is consistently defined, aligned to business concepts and captured as metadata\n- Designing, executing and monitoring data controls and transformation processes\n- Managing data quality including profiling, remediation, business rules and validation processes\n- Coordinating across functions to define and implement data sharing agreements, security levels, privacy restrictions and data retention policies\n\nPossible Role Titles:\n- Business Data Steward (Executive)\n- Front Line Data Officer\n- Functional Data Officer\n- Data Domain Steward\n- Data Custodian",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Business Element",
+      "qualifiedName": "glossary_dcam_business_element",
+      "name": "Business Element",
+      "shortDescription": "A unit of information that has a specific meaning in the context of a business process or collection of processes within a data domain.",
+      "longDescription": "Business concepts and business terms are different than business elements.  business elements are aligned to terms which express a concept.\n\nBusiness elements are the documented requirements (or needs) for data as defined by one or more business processes.\n\nThe realization of a business element in physical form is achieved by a data element.\n\nBusiness elements cannot be directly inspected or measured in this form as they do not physically exist in a data field that allows the capture of a data value. The physical instance of a data element that is aligned to the business element allows the capture of data values and can be inspected or measured.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Business Glossary",
+      "qualifiedName": "glossary_dcam_business_glossary",
+      "name": "Business Glossary",
+      "shortDescription": "A collection of term names and definitions from the perspective of the business process.",
+      "longDescription": "Best practice specifies that the source of the term name and business definition is the metadata repository.  The goal is to ensure linkage across all related metadata.\n\nThe business glossary may include additional metadata about the business element.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Business Metadata",
+      "qualifiedName": "glossary_dcam_business_metadata",
+      "name": "Business Metadata",
+      "shortDescription": "Provides context about the data from the perspective of the business process.",
+      "longDescription": "",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Business Rule",
+      "qualifiedName": "glossary_dcam_business_rule",
+      "name": "Business Rule",
+      "shortDescription": "A statement that defines or constrains some aspect of the business process.",
+      "longDescription": "Business rules and/or technical rules are the source of logic for the creation of data quality rules.\n\nBusiness rules can be simple or complex.  Simple movement of data from one location to another.  Or, complex with relationships to one or more dependent business rules.\n\nBusiness rules should be written in language meaningful to the business.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Business Term",
+      "qualifiedName": "glossary_dcam_business_term",
+      "name": "Business Term",
+      "shortDescription": "The name(s) and meaning of common business language.",
+      "longDescription": "",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Canonical Data Model",
+      "qualifiedName": "glossary_dcam_canonical_data_model",
+      "name": "Canonical Data Model",
+      "shortDescription": "A specialized form of a logical data model, developed with the target usage intention of being a reference artifact of elevated status above any/all other logical perspectives on the same subject matter, and to serve as a means of translating across or communicating between other comparative (logical) viewpoints on that subject matter.",
+      "longDescription": "Canonical data models serve architectural need by introducing a common pattern of structure across otherwise potentially nuanced logical perspectives. They're commonly applied in integration and messaging environments, to enable source-agnostic content perception or to structure communication through a standard logical form.\n\nCharacteristically, canonical data models strive to embody the most mathematically pure and objectively scientific end of the \"art versus science\" spectrum.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Chief Data Officer",
+      "qualifiedName": "glossary_dcam_chief_data_officer",
+      "name": "Chief Data Officer",
+      "shortDescription": "The most senior executive in the enterprise responsible for the strategy and implementation of the data management initiative.",
+      "longDescription": "The function includes, but is not limited to:\n- Establishing and maintaining the data management initiative\n- Understanding business requirements and aligning them to the objectives of the data management initiative\n- Defining the strategy and operational framework needed to implement the data management initiative\n- Documenting the business case and aligning it to the budget and funding mechanisms needed for initiative implementation and sustainability  \n- Defining the data quality framework necessary to ensure trust and confidence in data assets\n- Defining the data architecture framework for ensuring a unified view of meaning across the organization\n- Establishing the standards, policies and procedures for the data management initiative\n- Defining and implementing the data governance and organizational structures needed to support the objectives of the data management initiative \n- Ensuring stakeholder understanding, alignment and commitment to the objectives of the data management initiative",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Completeness",
+      "qualifiedName": "glossary_dcam_completeness",
+      "name": "Completeness",
+      "shortDescription": "A measurement of the availability of required data attributes.",
+      "longDescription": "Completeness measures the existence of required data attributes in the population of data records.  Completeness is one of the seven data quality dimensions.\n\nExamples:\n- A missing ticker symbol, CUSIP, or other identifier \n- A fixed income instrument record with a null coupon value\n- A benchmark or index that is missing a dividend notice or stock split \n- A record with missing attributes",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Conceptual Data Model",
+      "qualifiedName": "glossary_dcam_conceptual_data_model",
+      "name": "Conceptual Data Model",
+      "shortDescription": "A high level simplified data model used to express data concepts important to the business process.",
+      "longDescription": "The conceptual data model is designed as a communication tool that acts as a bridge between the data modelers and business process owners to ensure high level agreement of core data concepts.\n\nIdeally there would be alignment between the things described in the semantic model to the data concepts described in the conceptual data model.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Conformity",
+      "qualifiedName": "glossary_dcam_conformity",
+      "name": "Conformity",
+      "shortDescription": "A measurement of the alignment of content with the required standards.",
+      "longDescription": "Conformity measures how well the data aligns to internal, external or industry standards.  Conformity is one of the seven data quality dimensions.\n\nExamples:\n- Invalid ISO currency codes\n- Violation of allowable values (e.g., a state code for a country that does not have states)\n- Inconsistent date formats\n",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Consistency",
+      "qualifiedName": "glossary_dcam_consistency",
+      "name": "Consistency",
+      "shortDescription": "A measurement of compliance with required formats, values or definitions.",
+      "longDescription": "Consistency provides assurance that data values, formats and definitions in one data population agree with those in another population. Consistency is one of the seven data quality dimensions.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Construct",
+      "qualifiedName": "glossary_dcam_construct",
+      "name": "Construct",
+      "shortDescription": "A�generic representation of a concept unencumbered by unique characteristics of an industry or organization.",
+      "longDescription": "The construct is used by an organization to inform the design of a customized model for execution. The customization takes into account the size, complexity, geography, and culture of the organization.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Coverage",
+      "qualifiedName": "glossary_dcam_coverage",
+      "name": "Coverage",
+      "shortDescription": "A measurement of the availability of required data records.",
+      "longDescription": "Coverage refers to the breadth, depth and availability of data that exists but is missing from a data provider.  Coverage is one of the seven data quality dimensions.\n\nExamples:\n- A group of securities (e.g.,: corporate bonds) not included in a vendor feed\n- Quoted prices from an emerging market that are missing\n- Legal entity and hierarchy data missing from a country or region",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Critical Business Element",
+      "qualifiedName": "glossary_dcam_critical_business_element",
+      "name": "Critical Business Element",
+      "shortDescription": "A business element that is deemed materially important to one or more business processes.",
+      "longDescription": "The criticality is a requirement of the business process and thus is assigned to the business element.  A data element is not critical unless it is designated as a component of a critical business element.  Risk associated with this business element can be categorized based on adverse impact without adequate controls.\n\nCriticality is proposed by either the business that produces the data in their business process or by a consumer of the data. Criticality is approved as part of the data governance process.\n\nPer enterprise data management policy the critical designation results in requirements for escalated data quality controls and recorded evidence in the metadata for both the business element and the data element.\n\nSome organizations use critical and key as synonyms of each other while other organizations view criticality as a higher priority than key.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Critical Data Element",
+      "qualifiedName": "glossary_dcam_critical_data_element",
+      "name": "Critical Data Element",
+      "shortDescription": "A data element that is aligned to a critical business element and is deemed materially important.",
+      "longDescription": "The criticality is a requirement of the business process and thus is assigned to the business element.  A data element is not critical unless it is designated as a component of a critical business element.  Risk associated with this business element can be categorized based on adverse impact without adequate controls.\n\nCriticality is proposed by either the business that produces the data in their business process or by a consumer of the data. Criticality is approved as part of the data governance process.\n\nPer enterprise data management policy the critical designation results in requirements for escalated data quality controls and recorded evidence in the metadata for both the business element and the data element.\n\nSome organizations use critical and key as synonyms of each other while other organizations view criticality as a higher priority than key.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Data Architecture",
+      "qualifiedName": "glossary_dcam_data_architecture",
+      "name": "Data Architecture",
+      "shortDescription": "The strategy and execution of how data is designed (i.e., identified and defined) to support the enterprise objectives.",
+      "longDescription": "Data architecture is one of the subcomponents of enterprise architecture.  It is important to have integration between business architecture, data architecture and technology architecture. \n\nData architecture includes, but is not limited to:\n- Data domains\n- Data glossary\n- Logical and physical data requirements\n- Metadata\n- Models \n- Ontologies\n- Taxonomies",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Data Architecture Function",
+      "qualifiedName": "glossary_dcam_data_architecture_function",
+      "name": "Data Architecture Function",
+      "shortDescription": "The function that defines and implements the data content strategy for a given subset of data.",
+      "longDescription": "The data architecture function provides the content engineering bridge between business applications and technology implementation.  The focus is on content management including how the data will be identified and defined as well as how to access it across the organizational ecosystem.  The function of data architecture includes understanding the scope of data needed to satisfy business requirements as well as ensuring that the data is aligned to its precise meaning. \n\nThe function includes, but is not limited to:\n- Designing the data architecture processes\n- Establishing the operating model required to execute the defined data engineering processes \n- Establishing and implementing the framework for conceptual and logical data modeling\n- Defining logical data domains in collaboration with business and technology functions\n- Implementing a unified view of data meaning across the enterprise\n\nPossible Role Titles:\n- Data Architecture Executive\n- Head of Data Architecture\n- Data Architect Manager\n- Data Architect",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Data Asset",
+      "qualifiedName": "glossary_dcam_data_asset",
+      "name": "Data Asset",
+      "shortDescription": "A data asset is any collection of data owned by an organization that is considered to have intrinsic value.",
+      "longDescription": "Examples include, but are not limited too:\n- Document\n- Database\n- Electronic medium\n- Video\n- Audio\n- Website form",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Data Attribute",
+      "qualifiedName": "glossary_dcam_data_attribute",
+      "name": "Data Attribute",
+      "shortDescription": "A logical representation of an atomic level data element.",
+      "longDescription": "",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Data Boundary",
+      "qualifiedName": "glossary_dcam_data_boundary",
+      "name": "Data Boundary",
+      "shortDescription": "A limit or perspective applied to a data element.",
+      "longDescription": "A single data element may have more than one limit or perspective.\n\nThe data boundaries on a data element can be used as criteria to define a data set.\n\nCommon boundary types include, but are not limited to:\n- Asset class\n- Time\n- Geography\n- Allowable values\n\nFor example: price may have a data boundary for product where only a certain list of products have price (e.g., equity, fixed income) and others do not (e.g., annuities, cash). Furthermore, price can have a data boundary for time (e.g., real-time, end-of-day, end of month) that has a different implication depending on the context.\n\n",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Data Classification",
+      "qualifiedName": "glossary_dcam_data_classification",
+      "name": "Data Classification",
+      "shortDescription": "The process of organizing data in categories for its most effective and efficient use.",
+      "longDescription": "The classification process can be used to facilitate:\n- Access\n- Use\n- Prioritization\n- Execution of controls\n- Alignment to a particular use case\n\nCommon types of classification include, but are not limited to:\n- Security\n- Privacy \n- Confidentiality \n- Access \n- Data domain \n\nData can be classified according to multiple taxonomies.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Data Consumer",
+      "qualifiedName": "glossary_dcam_data_consumer",
+      "name": "Data Consumer",
+      "shortDescription": "A process, application or stakeholder that receives or uses data from a data producer.",
+      "longDescription": "The data consumer establishes requirements and quality expectations for the data.  Consumers need assurance that the data is fit-for-purpose and that the appropriate use of the data is aligned to data management, governance and risk management policy.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Data Control Function",
+      "qualifiedName": "glossary_dcam_data_control_function",
+      "name": "Data Control Function",
+      "shortDescription": "The function that sets the enterprise data risk controls framework and strategy.",
+      "longDescription": "The data control function is the first line of defense against risk from ineffective data management practices. This includes the identification of key risk indicators as well as reporting of key risk and performance indicators to executive management.  The function includes, but is not limited to: \n- Designing and implementing an organization-wide data risk governance framework \n- Establishing data policy and standards for mitigating risk from data \n- Defining and implementing risk profiling, assessment and oversight processes\n- Developing risk training and tools to ensure compliance with risk mitigation objectives\n- Monitoring and enforcing compliance with data policies and standards\n\nPossible Role Titles:\n- Data Control Executive\n- Head of Data Control\n- Data Control Manager",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Data Custodian",
+      "qualifiedName": "glossary_dcam_data_custodian",
+      "name": "Data Custodian",
+      "shortDescription": "An individual responsible for one or more data controls.",
+      "longDescription": "",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Data Dimension",
+      "qualifiedName": "glossary_dcam_data_dimension",
+      "name": "Data Dimension",
+      "shortDescription": "A data dimension has a specific definition related to a data warehouse.",
+      "longDescription": "",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Data Domain",
+      "qualifiedName": "glossary_dcam_data_domain",
+      "name": "Data Domain",
+      "shortDescription": "A logical representation of a category of data that has been designated and named.",
+      "longDescription": "Data domains are not physical repositories or databases.  Instead, they are logical categories or groupings of data that are deemed important and necessary to a firm�s normal business operation.  Data domains include both internally generated data as well as externally acquired data.\n\nExamples of data domains might include product data, customer data, trade data, pricing data, index data, risk data.  It is imperative that these strategic categories of data are identified, defined and inventoried to ensure their proper maintenance and use throughout the organization.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Data Element",
+      "qualifiedName": "glossary_dcam_data_element",
+      "name": "Data Element",
+      "shortDescription": "A unit of data that is considered in context to be indivisible. [ISO 2382-4:1999]",
+      "longDescription": "A data element is the realization of a business element in physical form.\n\nBusiness elements are the documented requirements (or needs) for data as defined by one or more business processes.\n\nBusiness elements cannot be directly inspected or measured in this form as they do not physically exist in a data field that allows the capture of a data value. The physical instance of a data element that is aligned to the business element allows the capture of data values and can be inspected or measured.\n\nA data element may align to 0 or more business elements. ",
+      "source": "Third Party",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Data Engineering",
+      "qualifiedName": "glossary_dcam_data_engineering",
+      "name": "Data Engineering",
+      "shortDescription": "The execution of the non-physical components of the data infrastructure to assure the data is fit-for-purpose.",
+      "longDescription": "Data engineering is a subcomponent of the data architecture execution plan.\n\nData engineering is the function of managing meaning.  This is about harmonization of data across multiple repositories to ensure that there is a unified view of the meaning of the data.  Some data (e.g., reference data) is aligned to precise contractual meaning.  Some data (e.g., customer data) is specific to the individual enterprise.  The EDM Council is supporting this with the development of FIBO (Financial Industry Business Ontology) for the financial service industry.\n\nA best practice is to manage the meaning of data to ensure it is precise, unambiguous, consistent and transparent.\n\nThe non-physical components of the data infrastructure includes, but is not limited to:\n- Data domains\n- Data glossary\n- Logical and physical data requirements\n- Metadata\n- Models \n- Ontologies\n- Taxonomies",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Data Entity",
+      "qualifiedName": "glossary_dcam_data_entity",
+      "name": "Data Entity",
+      "shortDescription": "A concept that represents a person, place or thing.",
+      "longDescription": "Data entities are described by data attributes.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Data Flow",
+      "qualifiedName": "glossary_dcam_data_flow",
+      "name": "Data Flow",
+      "shortDescription": "A movement of data from one point to another, without involving any intermediaries at a specific level of granularity, to transport data.",
+      "longDescription": "Data flow is a subset of comprehensive data lineage.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Data Governance Function",
+      "qualifiedName": "glossary_dcam_data_governance_function",
+      "name": "Data Governance Function",
+      "shortDescription": "The function that defines and implements the standards, controls and best practices of the data management initiative in alignment with strategy.",
+      "longDescription": "Data governance is responsible for creating and implementing a data control environment.  According to the Basel Committee on Banking Supervision (BCBS) � a data control environment consists of a set of policies governing all aspects of data acquisition, distribution, integration and usage that are sanctioned by executive management, based on standards, implemented across the data lifecycle, with clear accountability and monitored by audit.  The function includes, but is not limited to:\n- Designing and implementing the framework (including associated processes) necessary to sustain a data control environment\n- Establishing the operating model required to achieve governance objectives \n- Defining and implementing policy, standards and operating procedures \n- Establishing and implementing the data accountability mechanisms\n- Developing and implementing metrics needed to monitor and report on data management progress\n- Designing and implementing data governance training programs\n\nPossible Role Titles:\n- Data Governance Executive\n- Head of Data Governance\n- Data Governance Manager ",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Data Harmonization",
+      "qualifiedName": "glossary_dcam_data_harmonization",
+      "name": "Data Harmonization",
+      "shortDescription": "The process of aligning all representations of data to precise and consistent meaning.",
+      "longDescription": "",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Data Lifecycle",
+      "qualifiedName": "glossary_dcam_data_lifecycle",
+      "name": "Data Lifecycle",
+      "shortDescription": "A view of a data element as it exists in a range of stages from creation to destruction.",
+      "longDescription": "The data lifecycle stages typically include aspects of:\n- Creation\n- Capture\n- Storage\n- Movement\n- Maintenance\n- Usage\n- Archive\n- Destruction\n\nThere are various published models.  The actual model used by an organization will be selected to fit their use case.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Data Lineage",
+      "qualifiedName": "glossary_dcam_data_lineage",
+      "name": "Data Lineage",
+      "shortDescription": "Documentation of the sequence of movement and/or transformation of data as it flows between the consumer and the source(s).",
+      "longDescription": "Data elements may have multiple sources and end consumers.  Data lineage describes the chronology of ownership, custody and location of data.  Data lineage provides a visual mapping of the movement and changes in data from system to system.  The goal is to ensure that the data consumed is equivalent to the data delivered.  Data lineage provides a mapping of data for use in impact analysis and operational risk integrity. The complete lineage will document the full data flow and capture metadata about the movement and transformation of the data element.  Lineage may include a mapping of the data controls.  Data lineage is commonly confused with data traceability and data provenance and should be understood in relationship to one another.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Data Management Capability Assessment Model",
+      "qualifiedName": "glossary_dcam_data_management_capability_assessment_model",
+      "name": "Data Management Capability Assessment Model",
+      "shortDescription": "An industry-standard framework for the practice of data management.� It addresses the capabilities needed to position the business case, implement the operating model, ensure funding and support the organizational collaboration necessary to govern the meaning of the data and ensure fit-for-purpose data quality.� DCAM is widely adopted by the financial industry and is the basis for the EDM Council�s assessment and industry benchmarking initiatives. <http://www.edmcouncil.org/dcam>",
+      "longDescription": "",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Data Model",
+      "qualifiedName": "glossary_dcam_data_model",
+      "name": "Data Model",
+      "shortDescription": "A model that presents the declarative structure of data through a defined scope and perspective, and to a given level of abstraction.",
+      "longDescription": "Data models provide an existential and anatomical view of data definition, and depending upon their level of abstraction, will place differing emphasis upon  declarations of identity, composition, and the patterns of presence and cardinality by which differing data within a given scope can be expected to co-exist. \n\nThe most commonly recognized types (i.e., abstraction levels) of data model are:\n- Conceptual\n- Logical\n- Physical\n\nWhilst the techniques for evolving a robust or appropriately normalized data model are very mathematical, the subjective factors of scope, perspective, and content inclusion mean data modelling is generally deemed more of an art than a science.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Data Normalization",
+      "qualifiedName": "glossary_dcam_data_normalization",
+      "name": "Data Normalization",
+      "shortDescription": "The process of aligning data to its defined parameters.",
+      "longDescription": "This is a business centric perspective and not to be confused with the process of normalization in a data modeling context.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Data Officer",
+      "qualifiedName": "glossary_dcam_data_officer",
+      "name": "Data Officer",
+      "shortDescription": "The function performed by an executive responsible for the strategy and implementation of the data management initiative at a geographic or operating unit level of an organization.",
+      "longDescription": "Depending on the structure of the organization, the Data Officer function may fulfill the same responsibilities as the CDO.  In addition, the function includes, but is not limited to:\n- Ensuring the data management initiative is on track to deliver against objectives, goals and expectations\n- Ensuring business data ownership and stewardship\n- Securing the resources required for execution\n- Ensuring that the data management initiative is implemented in accordance with standards, policies and procedures\n- Managing collaboration with technology, operations and other cross-control functions\n\nPossible Role Titles:\n- Regional Data Officer\n- Group Data Officer\n- [Operating unit name] Data Officer",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Data Owner",
+      "qualifiedName": "glossary_dcam_data_owner",
+      "name": "Data Owner",
+      "shortDescription": "The person with overall accountability for the meaning, content, quality and distribution of a given set of data.",
+      "longDescription": "The Data Owner is accountable for the quality of a given data domain or set of data.  This includes the quality of the data as well as how the data is defined, manufactured, identified, maintained, delivered and consumed.  The Data Owner may not be directly involved in the curation and maintenance of the data, but they are accountable for ensuring that it meets quality criteria and is in alignment with organizational standards.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Data Producer",
+      "qualifiedName": "glossary_dcam_data_producer",
+      "name": "Data Producer",
+      "shortDescription": "A process, application or stakeholder that provisions data to one or more data consumers",
+      "longDescription": "",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Data Profiling",
+      "qualifiedName": "glossary_dcam_data_profiling",
+      "name": "Data Profiling",
+      "shortDescription": "The process of evaluating and grading a given source of data to determine whether it is fit-for-purpose.",
+      "longDescription": "Profiling is a methodology for determining the current state of data quality in a repository.  Data profiling would include a review against all data quality dimensions to identify data anomalies and evaluate data variance.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Data Provenance",
+      "qualifiedName": "glossary_dcam_data_provenance",
+      "name": "Data Provenance",
+      "shortDescription": "Documentation of the source of data with sufficient detail to allow reproducibility of a specific dataset.",
+      "longDescription": "Data provenance is commonly confused with data lineage and data traceability and should be understood in relationship to one another.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Data Quality",
+      "qualifiedName": "glossary_dcam_data_quality",
+      "name": "Data Quality",
+      "shortDescription": "1) A measurement of qualitative and quantitative conditions that determine whether the data is fit-for-purpose in a business process or operation.\n2) The function that ensures the data being used for operating processes is fit-for-purpose.",
+      "longDescription": "1) The quality of data can be evaluated against defined dimensions (i.e., accuracy, completeness, conformity to standards, consistency, coverage, timeliness and uniqueness) as well as against the business processes associated with its production.  \n\n2) The function includes, but is not limited to:\n- Defining data quality requirements in collaboration with stakeholders\n- Designing the data quality processes (e.g., validation and remediation) to ensure that data is fit-for-purpose\n- Establishing and implementing the data quality operating model\n- Facilitating the prioritization and escalation of cross-domain data remediation\n- Defining the data quality measurement criteria and reporting framework\n- Delivering training to achieve adoption of the data quality operating model and associated processes\n\nPossible Role Titles:\n- Data Quality Executive\n- Head of Data Quality\n- Data Quality Manager",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Data Quality Decay Rate",
+      "qualifiedName": "glossary_dcam_data_quality_decay_rate",
+      "name": "Data Quality Decay Rate",
+      "shortDescription": "The rate at which a data attribute loses its level of quality over time if not maintained. Decay can be measured against all dimension of data quality.",
+      "longDescription": "",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Data Quality Dimensions",
+      "qualifiedName": "glossary_dcam_data_quality_dimensions",
+      "name": "Data Quality Dimensions",
+      "shortDescription": "Categories of measurement used to evaluate the degree to which data is fit-for-purpose.",
+      "longDescription": "The EDM Council recognizes the meaning of seven core dimensions used to define and measure the quality of data.  \n\nThe seven dimensions include:\n- Accuracy\n- Completeness\n- Conformity\n- Consistency\n- Coverage\n- Timeliness\n- Uniqueness",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Data Quality Rule",
+      "qualifiedName": "glossary_dcam_data_quality_rule",
+      "name": "Data Quality Rule",
+      "shortDescription": "A statement that applies an algorithm or logic to a data value to measure the fit-for-purpose of the value. The statement is the documented defintion of the criteria used to measure that the data is fit-for-purpose.",
+      "longDescription": "A data quality rule is based on a business or technical rule and may execute a measurement of one or more of the data quality dimensions.\n\nA data quality rule validates the data against the dimensions of quality and may determine either an absolute or suspect defect.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Data Security",
+      "qualifiedName": "glossary_dcam_data_security",
+      "name": "Data Security",
+      "shortDescription": "The protection of data from accidental or intentional unauthorized use, modification, destruction, disclosure or theft.",
+      "longDescription": "",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Data Set",
+      "qualifiedName": "glossary_dcam_data_set",
+      "name": "Data Set",
+      "shortDescription": "Any organized collection of data made available for consumption.",
+      "longDescription": "A best practice is to render the data set in a useful format to the consumer.\n\nThe data set resides in a data asset.\n",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Data Sharing Agreement",
+      "qualifiedName": "glossary_dcam_data_sharing_agreement",
+      "name": "Data Sharing Agreement",
+      "shortDescription": "An agreement that sets out a common set of rules between the data producer and data consumer that establishes terms and restrictions of the use of consumed data.",
+      "longDescription": "",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Data Sponsor",
+      "qualifiedName": "glossary_dcam_data_sponsor",
+      "name": "Data Sponsor",
+      "shortDescription": "An executive responsible for ensuring adequate funding of the data management initiative.",
+      "longDescription": "The Data Sponsor is financially accountable for the data management initiative and the allocation of required resources.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Data Traceability",
+      "qualifiedName": "glossary_dcam_data_traceability",
+      "name": "Data Traceability",
+      "shortDescription": "The ability to track a data construct back to the construct it was derived from as a more concrete instantiation.",
+      "longDescription": "Examples include a physical column may trace back to a logical attribute, which in turn may trace to a business term, and that traces back to a concept.\n\nData traceability is commonly confused with data lineage and data provenance and should be understood in relationship to one another.\n",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Data Transformation",
+      "qualifiedName": "glossary_dcam_data_transformation",
+      "name": "Data Transformation",
+      "shortDescription": "The process of converting the meaning and format of data from one system to another.",
+      "longDescription": "",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Data-at-Rest",
+      "qualifiedName": "glossary_dcam_data-at-rest",
+      "name": "Data-at-Rest",
+      "shortDescription": "Data that is in physical storage and accessible to those that need it.",
+      "longDescription": "The concept of motion means the logical view of data being passed between systems, whether by direct linkage using interfaces or files being passed or transported.\n\nExamples of motion include, but are not limited to:\n- ETL or ELT\n- database replication\n- streaming data involved in big data analytics",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Data-in-Motion",
+      "qualifiedName": "glossary_dcam_data-in-motion",
+      "name": "Data-in-Motion",
+      "shortDescription": "Data that is in the process of being transported.",
+      "longDescription": "Data-in-motion can be interrogated in the flow of the process.\n\nIn big data, data-in-motion is the process of analyzing data on the fly without being stored.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Data-in-Use",
+      "qualifiedName": "glossary_dcam_data-in-use",
+      "name": "Data-in-Use",
+      "shortDescription": "Data that is in active maintenance.",
+      "longDescription": "",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Derived Data",
+      "qualifiedName": "glossary_dcam_derived_data",
+      "name": "Derived Data",
+      "shortDescription": "Data that are created from other data or calculated.",
+      "longDescription": "",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Determined Data",
+      "qualifiedName": "glossary_dcam_determined_data",
+      "name": "Determined Data",
+      "shortDescription": "Data elements that are subjective thereby including an element of opinion or human interpretation.",
+      "longDescription": "",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Domain",
+      "qualifiedName": "glossary_dcam_domain",
+      "name": "Domain",
+      "shortDescription": "The level of the organization that performs specific activities for the data domain.",
+      "longDescription": "The operating levels of an organization are:\n- Enterprise\n- Region\n- Operating unit\n- Domain",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Dublin Core",
+      "qualifiedName": "glossary_dcam_dublin_core",
+      "name": "Dublin Core",
+      "shortDescription": "ISO 15836:2008 (Dublin Core) establishes a standard for cross-domain resource description, known as the Dublin Core Metadata Element Set. This defines the elements typically used in the context of an application profile which constrains or specifies their use in accordance with local or community-based requirements and policies. However, it is does not define implementation detail, which is outside the scope of  the standard.\nSource: https://www.iso.org/standard/52142.html",
+      "longDescription": "",
+      "source": "Third Party",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Enterprise",
+      "qualifiedName": "glossary_dcam_enterprise",
+      "name": "Enterprise",
+      "shortDescription": "The level of the organization that performs organization-wide business and/or cotrol function activities.",
+      "longDescription": "The operating levels of an organization are:\n- Enterprise\n- Region\n- Operating unit\n- Domain",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Enterprise Architecture",
+      "qualifiedName": "glossary_dcam_enterprise_architecture",
+      "name": "Enterprise Architecture",
+      "shortDescription": "The strategy and execution of how business, data and technology functions are holistically designed to support the organization.",
+      "longDescription": "Enterprise architecture includes the following subcomponents.\n- Business architecture\n- Data architecture\n- Technology architecture",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Enterprise Metadata Repository",
+      "qualifiedName": "glossary_dcam_enterprise_metadata_repository",
+      "name": "Enterprise Metadata Repository",
+      "shortDescription": "The authoritative collection of metadata across the organization. ",
+      "longDescription": "The purpose of the repository is to provide a consistent and reliable means of access to the metadata.\n\nFirms may have one or many repositories across the organization.  The goal is to have a rationalized source of metadata for the organization.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Exception Handling",
+      "qualifiedName": "glossary_dcam_exception_handling",
+      "name": "Exception Handling",
+      "shortDescription": "A process by which records are catalogued, queued and remediated after failing a data quality rule.",
+      "longDescription": "",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Executive Data Steward",
+      "qualifiedName": "glossary_dcam_executive_data_steward",
+      "name": "Executive Data Steward",
+      "shortDescription": "An individual responsible for executing the data management strategy as defined by the Group Data Officer.",
+      "longDescription": "",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Financial Industry Business Ontology",
+      "qualifiedName": "glossary_dcam_financial_industry_business_ontology",
+      "name": "Financial Industry Business Ontology",
+      "shortDescription": "An open standards business conceptual model developed by EDM Council members of how financial instruments, business entities and processes work in the financial industry.",
+      "longDescription": "",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Function",
+      "qualifiedName": "glossary_dcam_function",
+      "name": "Function",
+      "shortDescription": "An operational function of the organization (e.g., data quality function).",
+      "longDescription": "",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Golden Record",
+      "qualifiedName": "glossary_dcam_golden_record",
+      "name": "Golden Record",
+      "shortDescription": "A single, precisely defined, verified and officially designated version of data.",
+      "longDescription": "The golden record is designated by a business or operational process to indicate that the data has been validated as fit-for-purpose.  A golden record should be used for all applications and enforceable by policy.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Guideline",
+      "qualifiedName": "glossary_dcam_guideline",
+      "name": "Guideline",
+      "shortDescription": "Recommended best practices that: 1) Support implementation of a standard or interpretation of policy requirements; or 2) address areas not covered by existing policy documents",
+      "longDescription": "Compliance to a guideline is not enforced.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Inference Processing",
+      "qualifiedName": "glossary_dcam_inference_processing",
+      "name": "Inference Processing",
+      "shortDescription": "Inference on the Semantic Web can be characterized by discovering new relationships. On the Semantic Web, data is modeled as a set of (named) relationships between resources. �Inference� means that automatic procedures can generate new relationships based on the data and based on some additional information in the form of a vocabulary, e.g., a set of rules. Whether the new relationships are explicitly added to the set of data, or are returned at query time, is an implementation issue.\nSource: https://www.w3.org/standards/semanticweb/inference",
+      "longDescription": "",
+      "source": "Third Party",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Information Architecture",
+      "qualifiedName": "glossary_dcam_information_architecture",
+      "name": "Information Architecture",
+      "shortDescription": "The function that enables consistent and standardized access, governance and control to an organization's information assets.",
+      "longDescription": "Information architecture is one of the subcomponents of enterprise architecture. \n\nInformation architecture is�the combination of the disciplines of business, data and technology architecture.\n\nInformation management and the analysis of data include straight reporting, data analytics and data science.\n\nThe information analytics infrastructure includes, but is not limited to:\n- Business Intelligence (BI) tools\n- Reporting data marts\n- Third party analytics",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Logical Data Model",
+      "qualifiedName": "glossary_dcam_logical_data_model",
+      "name": "Logical Data Model",
+      "shortDescription": "A data model that is based on the data concepts that has all data attributes and relationships required to support the business process independent of any particular technology or solution.",
+      "longDescription": "The logical data model supports the set of business elements required by the business process.  However, the logical data model does not necessarily include the full requirements for each business element.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Master Data",
+      "qualifiedName": "glossary_dcam_master_data",
+      "name": "Master Data",
+      "shortDescription": "Entities, relationships, and attributes which are identified as critical, shared across the enterprise, and foundational to key business processes and application systems, and peripheral and context-providing to the transactional data they manage.",
+      "longDescription": "",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Master Data Management",
+      "qualifiedName": "glossary_dcam_master_data_management",
+      "name": "Master Data Management",
+      "shortDescription": "The process of achieving master data includes all the defined data management capabilities along with a process of compiling an authoritative value when sources present data variation.",
+      "longDescription": "",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Materiality",
+      "qualifiedName": "glossary_dcam_materiality",
+      "name": "Materiality",
+      "shortDescription": "The degree to which the use of a data element in the business process could result in a substantive impact to the financial, operational or reputational position of the organization.",
+      "longDescription": "",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Metadata",
+      "qualifiedName": "glossary_dcam_metadata",
+      "name": "Metadata",
+      "shortDescription": "Data that serves to provide additional information or context about other data.",
+      "longDescription": "Metadata facilitates:\n- Consistency of definition\n- Clarity of relationship\n- Clarity of data lineage\n- Operational efficiencies\n\nMetadata falls into three categories:\n- Business (also called Descriptive)\n- Technical (also called Structural)\n- Operational (also called Administrative)",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Metadata Management",
+      "qualifiedName": "glossary_dcam_metadata_management",
+      "name": "Metadata Management",
+      "shortDescription": "The function that ensures the documentation, definition, and implementation of metadata.",
+      "longDescription": "The metadata management function is responsible for the quality, implementation, recording and use of metadata. The metadata management function supports the business and technical data stewards to ensure compliance with policy and the adoption of metadata standards.  \n\nThe function includes, but is not limited to:\n- Establishing the metadata management framework and associated processes\n- Defining and implementing the operating model for metadata management\n- Selecting and implementing the metadata management tool sets in accordance with internal guidelines \n- Documenting content in the metadata repository\n- Monitoring the completeness and accuracy of metadata\n- Developing and delivering training to achieve adoption of the operating model associated processes\n\nPossible Role Titles:\n- Metadata Management Executive\n- Head of Metadata Management\n- Metadata Manager",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Metadata Manager",
+      "qualifiedName": "glossary_dcam_metadata_manager",
+      "name": "Metadata Manager",
+      "shortDescription": "An individual who is responsible at the domain level to monitor the quality of the business element and data element metadata and assist with access to and application of the metadata.",
+      "longDescription": "They support the Business Data Steward(s) and Technical Data Steward(s) in the process to capture, record and validate the business element and data element metadata.\n\nAlignment is to the business Group Data Officer or Executive Data Steward depending on size of group and domain(s)  with informal alignment to the metadata management executive in the Chief Data Officer's organization.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Model",
+      "qualifiedName": "glossary_dcam_model",
+      "name": "Model",
+      "shortDescription": "An executable representation of an idea or theory.",
+      "longDescription": "",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Ontology",
+      "qualifiedName": "glossary_dcam_ontology",
+      "name": "Ontology",
+      "shortDescription": "A hierarchical structure of concepts or entities within a domain, organized by relationships.",
+      "longDescription": "Two types of data ontologies are reference and operational.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Operating Model",
+      "qualifiedName": "glossary_dcam_operating_model",
+      "name": "Operating Model",
+      "shortDescription": "A model�representing how a business process or set of processes delivers value to its stakeholders.",
+      "longDescription": "",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Operating Unit",
+      "qualifiedName": "glossary_dcam_operating_unit",
+      "name": "Operating Unit",
+      "shortDescription": "The level of the organization that performs unique business and/or control function activities.",
+      "longDescription": "The operating levels of an organization are:\n- Enterprise\n- Region\n- Operating unit\n- Domain",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Operational Metadata",
+      "qualifiedName": "glossary_dcam_operational_metadata",
+      "name": "Operational Metadata",
+      "shortDescription": "Contains information that is available in operational systems and run-time environments from the perspective of the process execution.",
+      "longDescription": "Operational metadata includes, but is not limited to:\n- data file size \n- date and time of last load, updates, and backups \n- names of and information about operational procedures and scripts\n- run-time statistics",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Personally Identifiable Information",
+      "qualifiedName": "glossary_dcam_personally_identifiable_information",
+      "name": "Personally Identifiable Information",
+      "shortDescription": "Any information that may be used to make a record of a person identifiable, directly or indirectly.",
+      "longDescription": "A classification of data designed to ensure the security of personal information deemed to be private data.\n\nVarious global regulators have published criteria related to personal data.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Physical Data Model",
+      "qualifiedName": "glossary_dcam_physical_data_model",
+      "name": "Physical Data Model",
+      "shortDescription": "A data model that is the instantiation of meaning, relationships and data attributes into a physical implementation automated by technology.",
+      "longDescription": "The physical data model is the physical implementation of the logical data model.\n\nIdeally the physical data model is based on the logical data attributes, however that is not required for a physical model to exist.\n\nSometimes the physical data model has data elements different or in addition to the logical data model.  This may be due to decomposition of a compound element or administrative elements required for physical implementation. \n",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Physical Metadata",
+      "qualifiedName": "glossary_dcam_physical_metadata",
+      "name": "Physical Metadata",
+      "shortDescription": "Metadata that describes the physical location of data.",
+      "longDescription": "",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Policy",
+      "qualifiedName": "glossary_dcam_policy",
+      "name": "Policy",
+      "shortDescription": "High level directive that expresses goals and represents management expectations for legal, regulatory and/or organizational requirements.",
+      "longDescription": "Policies are aligned to the principles.\n",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Principle",
+      "qualifiedName": "glossary_dcam_principle",
+      "name": "Principle",
+      "shortDescription": "A statement of belief or foundational concepts that provide guidance for decision making and behaviors.",
+      "longDescription": "Principles may originate from the organization, legal or regulatory sources.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Procedure",
+      "qualifiedName": "glossary_dcam_procedure",
+      "name": "Procedure",
+      "shortDescription": "A low level step or task in a process that specifies how to achieve an activity.",
+      "longDescription": "Procedures are more granular description of steps within a process.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Process",
+      "qualifiedName": "glossary_dcam_process",
+      "name": "Process",
+      "shortDescription": "A series of steps that when executed in order achieve the desired outcome.",
+      "longDescription": "",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Project Management Office",
+      "qualifiedName": "glossary_dcam_project_management_office",
+      "name": "Project Management Office",
+      "shortDescription": "An organizational body or entity assigned various responsibilities related to the centralized and coordinated management of those projects under its domain.\nSource: Project Management Institute (PMI)",
+      "longDescription": "",
+      "source": "Third Party",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Protected Health Information",
+      "qualifiedName": "glossary_dcam_protected_health_information",
+      "name": "Protected Health Information",
+      "shortDescription": "Personal data concerning health should include all data pertaining to the health status of a person which reveal information relating to the past, current or future physical or mental health status of the individual.",
+      "longDescription": "A classification of data designed to ensure the security of health related data.\n\nVarious global regulators have published criteria related to health information.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Provisioning Point",
+      "qualifiedName": "glossary_dcam_provisioning_point",
+      "name": "Provisioning Point",
+      "shortDescription": "A service from which data associated with a data domain can be acquired after it has been sourced.",
+      "longDescription": "The purpose of a provisioning point is the distribution of data from a given data domain to ensure the appropriate source of data throughout the organization.  Provisioning points can be executed in either physical repositories or via virtual access and help establish a control environment for data throughout the organization.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "RACI Matrix",
+      "qualifiedName": "glossary_dcam_raci_matrix",
+      "name": "RACI Matrix",
+      "shortDescription": "A tool to define a range of roles and responsibilities across the stakeholders of a process.",
+      "longDescription": "R = Responsible - execution of activity\nA = Accountable - liable for the activity\nC = Consulted - input to the activity\nI = Informed - notified of the activity\n\nThere are other versions that introduce additional accountability categories.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Reference Data",
+      "qualifiedName": "glossary_dcam_reference_data",
+      "name": "Reference Data",
+      "shortDescription": "Data that defines the set of allowable values to be used by other data fields.",
+      "longDescription": "Different use cases could have different sets of reference data for the same data element. Additionally,  the enterprise may have a higher level compilation of reference data.\n\nBest practice is to have a single enterprise level reference data construct that enables the translation between value sets and ensures a holistic set of meanings.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Region",
+      "qualifiedName": "glossary_dcam_region",
+      "name": "Region",
+      "shortDescription": "The level of the organiation that performs geographic specific requirements for business and/or control funciton activities.",
+      "longDescription": "The operating levels of an organization are:\n- Enterprise\n- Region\n- Operating unit\n- Domain",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Resource Description Framework",
+      "qualifiedName": "glossary_dcam_resource_description_framework",
+      "name": "Resource Description Framework",
+      "shortDescription": "RDF is a standard model for data interchange on the Web. RDF has features that facilitate data merging even if the underlying schemas differ, and it specifically supports the evolution of schemas over time without requiring all the data consumers to be changed.\nSource: https://www.w3.org/RDF/",
+      "longDescription": "",
+      "source": "Third Party",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Semantic Model",
+      "qualifiedName": "glossary_dcam_semantic_model",
+      "name": "Semantic Model",
+      "shortDescription": "A model that defines the meaning of things that are important to the business process and the relationships between those meanings.",
+      "longDescription": "Semantic relationships express the relatedness and the comparative proximity of meanings through considerations such as breadth, specificity, overlap and distinction.\n\nA semantic model is different than a semantic data model or semantic web.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Semantics",
+      "qualifiedName": "glossary_dcam_semantics",
+      "name": "Semantics",
+      "shortDescription": "Semantics is the linguistic and philosophical study of meaning.",
+      "longDescription": "",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Simple Knowledge Operating System",
+      "qualifiedName": "glossary_dcam_simple_knowledge_operating_system",
+      "name": "Simple Knowledge Operating System",
+      "shortDescription": "The Simple Knowledge Organization System (SKOS) is a common data model for knowledge organization systems such as thesauri, classification schemes, subject heading systems and taxonomies. Using SKOS, a knowledge organization system can be expressed as machine-readable data. It can then be exchanged between computer applications and published in a machine-readable format in the Web.\nSource: https://www.w3.org/TR/2009/REC-skos-reference-20090818/ https://www.w3.org/2004/02/skos/",
+      "longDescription": "",
+      "source": "Third Party",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Source of Origin",
+      "qualifiedName": "glossary_dcam_source_of_origin",
+      "name": "Source of Origin",
+      "shortDescription": "The genesis of data content prior to being captured electronically.",
+      "longDescription": "The source of origin refers to the source of a data element.   The data value may have been created by an individual in the business process, manually captured in a document, sourced manually or captured electronically from an external provider.   For example, the prospectus would be the source of origin for the instrument record in the security master database.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Stakeholder",
+      "qualifiedName": "glossary_dcam_stakeholder",
+      "name": "Stakeholder",
+      "shortDescription": "An interested participant (e.g., data producer, data consumer, supporting process) in the data ecosystem.",
+      "longDescription": "",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Standard",
+      "qualifiedName": "glossary_dcam_standard",
+      "name": "Standard",
+      "shortDescription": "A rule or set of rules that defines expected actions for achieving compliance to associated policies.",
+      "longDescription": "Standards are audited for compliance.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Subject Matter Expert",
+      "qualifiedName": "glossary_dcam_subject_matter_expert",
+      "name": "Subject Matter Expert",
+      "shortDescription": "An individual who is an authority in a business process, data manufacturing process or application.",
+      "longDescription": "",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "System of Origin",
+      "qualifiedName": "glossary_dcam_system_of_origin",
+      "name": "System of Origin",
+      "shortDescription": "Any application or repository where data is initially captured.",
+      "longDescription": "A system of origin is the point at which information has been introduced, without validation or remediation, into the organization.  If the system of origin is considered valid without reconciliation, then the system of origin could also be classified as the system of record.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "System of Record",
+      "qualifiedName": "glossary_dcam_system_of_record",
+      "name": "System of Record",
+      "shortDescription": "The authoritative data source for the specified data element after it has been remediated and validated.",
+      "longDescription": "SORs are repositories of data that have been screened, validated and exceptions remediated.  To ensure data integrity there must be only one system of record for a logical category of data.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Target Operating Model",
+      "qualifiedName": "glossary_dcam_target_operating_model",
+      "name": "Target Operating Model",
+      "shortDescription": "A presentation of the vision of the ideal future state operating model of a business process or a collection of processes within the organization.",
+      "longDescription": "",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Taxonomy",
+      "qualifiedName": "glossary_dcam_taxonomy",
+      "name": "Taxonomy",
+      "shortDescription": "An orderly classification of things or concepts into parent-child relationships.",
+      "longDescription": "A data taxonomy is critical to establishing common organization of data across an enterprise and is required to ensure data is fit-for-purpose.\n\nTaxonomies are used in data management to organize or classify the following, but are not limited to:\n- Data modeling\n- Glossaries\n- Metadata\n- Domain registry\n- Data stores\n- Data flows",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Technical Data Stewardship",
+      "qualifiedName": "glossary_dcam_technical_data_stewardship",
+      "name": "Technical Data Stewardship",
+      "shortDescription": "The function that manages the technical implementation of the data management initiative.",
+      "longDescription": "The technical data stewardship function manages the technology (e.g., databases, data marts, data warehouses) and executes the physical implementation of the data elements associated with selected data domains.\n\nThe function includes, but is not limited to:\n- Designing, building and managing the technical infrastructure associated with a selected data domain\n- Aligning business elements with their associated data components\n- Translating business and data elements into technical specifications \n- Defining and managing technical service level agreements \n- Defining the technical aspects of data quality, transformation and movement controls\n- Monitoring and remediating data defects against established quality thresholds\n- Establishing and implementing root cause analysis of data defects \n- Managing technical metadata\n\nPossible Role Titles:\n- Technical Data Steward (Executive)\n- Data Custodian",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Technical Metadata",
+      "qualifiedName": "glossary_dcam_technical_metadata",
+      "name": "Technical Metadata",
+      "shortDescription": "Used to describe the creation, organization, movement, change and storage of the data from the perspective of the physical implementation.",
+      "longDescription": "Technical metadata includes, but is not limited to:\n- database system names\n- table and column names\n- data types\n- allowable values\n- lineage",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Technology Architecture",
+      "qualifiedName": "glossary_dcam_technology_architecture",
+      "name": "Technology Architecture",
+      "shortDescription": "The strategy and execution of how the physical infrastructure is designed to support the business and data needs of the organization.",
+      "longDescription": "Technology architecture is one of the subcomponents of enterprise architecture.  It is important to have integration between business architecture, data architecture and technology architecture. \n\nThe physical infrastructure includes, but is not limited to:\n- Hardware \n- System software\n- Locations\n- Configurations\n- Standards and adopted protocols\n- Linkages of computing platforms and/or servers to existing and planned applications and database",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Technology Architecture Function",
+      "qualifiedName": "glossary_dcam_technology_architecture_function",
+      "name": "Technology Architecture Function",
+      "shortDescription": "The function that supports the technical strategy, design, and execution plan for the technical infrastructure in alignment with the data strategy, design and execution to support the business objectives.",
+      "longDescription": "The technology architecture function ensures the objectives of the data management initiative can be made operational.  \n\nThe function includes, but is not limited to:\n- Translating business requirements into the technology architecture and systems design\n- Aligning the business technology blueprint to enterprise architectural policy and guidelines\n- Manage infrastructure capacity, systems design, transmission capability and analytical platforms\n- Evaluate and recommend vendor solutions\n\nPossible Role Titles:\n- Technology Architecture Executive\n- Technology Architect Manager\n- Technology Architect\n- Solution Architect",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Term",
+      "qualifiedName": "glossary_dcam_term",
+      "name": "Term",
+      "shortDescription": "A word or phrase used to describe a thing or express a concept in a clearly defined context.",
+      "longDescription": "\"Things\" are commonly referred to in conceptual modeling.\n\nThe presentation of a collection of terms would commonly be called a business glossary.",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Timeliness",
+      "qualifiedName": "glossary_dcam_timeliness",
+      "name": "Timeliness",
+      "shortDescription": "A measurement of the degree to which data is both representative of current conditions and available for use.",
+      "longDescription": "Timeliness is a measurement of how well content represents current market and business conditions as well as whether the data is functionally available when needed.  Timeliness is one of the seven Data Quality Dimensions.\n\nExamples:\n- A file delivered too late for a business process or operation\n- An issuance or corporate action not delivered when it was announced\n- A credit rating change not updated on the day if was issued\n- A new prospectus not given an official number from the national numbering agency\n",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Transactional Data",
+      "qualifiedName": "glossary_dcam_transactional_data",
+      "name": "Transactional Data",
+      "shortDescription": "Data describing an event in a business process at a specific point in time.",
+      "longDescription": "",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Uniqueness",
+      "qualifiedName": "glossary_dcam_uniqueness",
+      "name": "Uniqueness",
+      "shortDescription": "A measurement of the degree that no record or attribute is recorded more than once.",
+      "longDescription": "Uniqueness refers to the singularity of records and or attributes.  The objective is a single (i.e., unique) recording of data.  Uniqueness is one of the seven data quality dimensions.\n\nExamples:\n- Two instances of the same security with different identifiers or spellings\n- A preferred share represented as both an equity and debt object in the same database",
+      "source": "EDMC",
+      "steward": "cperks@edmc.sql"
+    },
+    {
+      "displayText": "Web Ontology Language",
+      "qualifiedName": "glossary_dcam_web_ontology_language",
+      "name": "Web Ontology Language",
+      "shortDescription": "Web Ontology Language (OWL) is a Semantic Web language designed to represent rich and complex knowledge about things, groups of things, and relations between things.\nSource: https://www.w3.org/2001/sw/wiki/OWL",
+      "longDescription": "",
+      "source": "Third Party",
+      "steward": "cperks@edmc.sql"
+    }
+  ],
+  "longDescription": "At the request of the membership, the EDM Council has developed a Data Management Business Glossary. The goal is to formalize the business terminology used to describe the practice of data management. To achieve this goal, we organized a group of industry practitioners and asked them to impose rigor on the definition of terms and to provide the clarity needed to ensure consistent collaboration among organizational stakeholders. . This publishing has approximately 130 terms defined. The terms are aligned to one or more of the seven DCAM components. Many terms also have tags that create sub-groupings of related terms (i.e., data architecture, roles & responsibilities, provisioning, metadata, governance and data quality).",
+  "name": "DCAM Business Glossary",
+  "qualifiedName": "edm_dcam@glossary",
+  "shortDescription": "Data Management Capability Assessment Model Business Glossary"
+}

@@ -252,7 +252,80 @@
           "isIndexable": true,
           "isOptional": true,
           "isUnique": false
+        },
+        {
+          "name": "prodOrOther",
+          "typeName": "string",
+          "isOptional": true,
+          "cardinality": "SINGLE",
+          "isUnique": false,
+          "isIndexable": true
+        },
+        {
+          "name": "contact_info",
+          "typeName": "string",
+          "isOptional": true,
+          "cardinality": "SINGLE",
+          "isUnique": false,
+          "isIndexable": false
         }
+      ]
+    },
+    {
+      "name": "aws_glue_etl",
+      "description": "AWS Glue ETL Process",
+      "attributeDefs": [
+        {
+          "name": "userName",
+          "typeName": "string",
+          "isOptional": true,
+          "cardinality": "SINGLE",
+          "valuesMinCount": 0,
+          "valuesMaxCount": 1,
+          "isUnique": false,
+          "isIndexable": false,
+          "includeInNotification": false,
+          "searchWeight": -1
+        },
+        {
+          "name": "startTime",
+          "typeName": "long",
+          "isOptional": true,
+          "cardinality": "SINGLE",
+          "valuesMinCount": 0,
+          "valuesMaxCount": 1,
+          "isUnique": false,
+          "isIndexable": false,
+          "includeInNotification": false,
+          "searchWeight": -1
+        },
+        {
+          "name": "endTime",
+          "typeName": "long",
+          "isOptional": true,
+          "cardinality": "SINGLE",
+          "valuesMinCount": 0,
+          "valuesMaxCount": 1,
+          "isUnique": false,
+          "isIndexable": false,
+          "includeInNotification": false,
+          "searchWeight": -1
+        },
+        {
+          "name": "processId",
+          "typeName": "string",
+          "isOptional": false,
+          "cardinality": "SINGLE",
+          "valuesMinCount": 1,
+          "valuesMaxCount": 1,
+          "isUnique": false,
+          "isIndexable": true,
+          "includeInNotification": false,
+          "searchWeight": -1
+        }
+      ],
+      "superTypes": [
+        "Process"
       ]
     }
   ],

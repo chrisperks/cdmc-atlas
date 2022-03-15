@@ -3,7 +3,7 @@
     "guid": "-1",
     "typeName": "sqldb_table",
     "attributes": {
-      "name": "accounts",
+      "name": "account",
       "description": "Business that represents a customer or potential customer. The company that is billed in business transactions.",
       "qualifiedName": "accountsdb.accounts@sqldb",
       "name_path": "accountsdb.accounts@sqldb",

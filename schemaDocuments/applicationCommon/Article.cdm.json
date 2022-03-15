@@ -97,7 +97,7 @@
                           "constantValues": [
                             [
                               "en",
-                              "Shows the ID of the article."
+                              "ID of the article."
                             ]
                           ]
                         }
@@ -108,7 +108,7 @@
                 "sourceName": "kbarticleid",
                 "sourceOrdering": 1,
                 "displayName": "Article",
-                "description": "Shows the ID of the article."
+                "description": "ID of the article."
               },
               {
                 "entity": {
@@ -174,7 +174,7 @@
                                 "constantValues": [
                                   [
                                     "en",
-                                    "Choose the template that you want to use as a base for creating the new article."
+                                    "template that you want to use as a base for creating the new article."
                                   ]
                                 ]
                               }
@@ -186,7 +186,7 @@
                       "sourceName": "kbarticletemplateid",
                       "sourceOrdering": 2,
                       "displayName": "Base Template",
-                      "description": "Choose the template that you want to use as a base for creating the new article."
+                      "description": "template that you want to use as a base for creating the new article."
                     }
                   }
                 }
@@ -320,7 +320,7 @@
                           "constantValues": [
                             [
                               "en",
-                              "Choose the subject of the article to assist with article searches. You can configure subjects under Business Management in the Settings area."
+                              "subject of the article to assist with article searches. You can configure subjects under Business Management in the Settings area."
                             ]
                           ]
                         }
@@ -331,7 +331,7 @@
                 "sourceName": "subjectid",
                 "sourceOrdering": 4,
                 "displayName": "Subject",
-                "description": "Choose the subject of the article to assist with article searches. You can configure subjects under Business Management in the Settings area."
+                "description": "subject of the article to assist with article searches. You can configure subjects under Business Management in the Settings area."
               },
               {
                 "name": "articleXml",
@@ -372,7 +372,7 @@
                           "constantValues": [
                             [
                               "en",
-                              "Shows the article content and formatting, stored as XML."
+                              "article content and formatting, stored as XML."
                             ]
                           ]
                         }
@@ -384,7 +384,7 @@
                 "sourceName": "articlexml",
                 "sourceOrdering": 5,
                 "displayName": "Article XML",
-                "description": "Shows the article content and formatting, stored as XML.",
+                "description": "article content and formatting, stored as XML.",
                 "maximumLength": 1073741823
               },
               {
@@ -1610,7 +1610,7 @@
                           "constantValues": [
                             [
                               "en",
-                              "Shows the conversion rate of the record's currency. The exchange rate is used to convert all money fields in the record from the local currency to the system's default currency."
+                              "conversion rate of the record's currency. The exchange rate is used to convert all money fields in the record from the local currency to the system's default currency."
                             ]
                           ]
                         }
@@ -1622,7 +1622,7 @@
                 "sourceName": "exchangerate",
                 "sourceOrdering": 46,
                 "displayName": "Exchange Rate",
-                "description": "Shows the conversion rate of the record's currency. The exchange rate is used to convert all money fields in the record from the local currency to the system's default currency.",
+                "description": "conversion rate of the record's currency. The exchange rate is used to convert all money fields in the record from the local currency to the system's default currency.",
                 "maximumValue": "100000000000",
                 "minimumValue": "1E-10"
               },
@@ -1690,7 +1690,7 @@
                                 "constantValues": [
                                   [
                                     "en",
-                                    "Choose the local currency for the record to make sure budgets are reported in the correct currency."
+                                    "local currency for the record to make sure budgets are reported in the correct currency."
                                   ]
                                 ]
                               }
@@ -1703,7 +1703,7 @@
                       "sourceName": "transactioncurrencyid",
                       "sourceOrdering": 47,
                       "displayName": "Currency",
-                      "description": "Choose the local currency for the record to make sure budgets are reported in the correct currency."
+                      "description": "local currency for the record to make sure budgets are reported in the correct currency."
                     }
                   }
                 }

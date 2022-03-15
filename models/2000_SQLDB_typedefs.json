@@ -2,7 +2,18 @@
   "enumDefs": [],
   "businessMetadataDefs": [],
   "structDefs": [],
-  "classificationDefs": [],
+  "classificationDefs": [
+    {
+      "category": "Classification",
+      "name": "Sensitive",
+      "description": "Denotes that this entity contains sensitive (i.e. PII) data"
+    },
+    {
+      "category": "Classification",
+      "name": "Not Sensitive",
+      "description": "Denotes that this entity does not contain sensitive data"
+    }
+  ],
   "entityDefs": [
     {
       "name": "sqldb_instance",

@@ -1,0 +1,168 @@
+{
+  "entity": {
+    "guid": "-1",
+    "typeName": "sqldb_table",
+    "attributes": {
+      "name": "socialprofile",
+      "description": "Used to store social profile information of its associated account and contacts on different social channels.",
+      "qualifiedName": "accountsdb.socialprofile@sqldb",
+      "name_path": "accountsdb.socialprofile@sqldb",
+      "createTime": 1607476058882,
+      "comment": "",
+      "type": "Managed",
+      "contact_info": "Chris (cperks@cdmc.sql)"
+    },
+    "relationshipAttributes": {
+      "db": {
+        "typeName": "sqldb_db",
+        "uniqueAttributes": {
+          "qualifiedName": "ASMSQL001.accountsdb@sqldb"
+        }
+      },
+      "columns": [
+        {
+          "guid": "-2"
+        },
+        {
+          "guid": "-3"
+        },
+        {
+          "guid": "-4"
+        },
+        {
+          "guid": "-5"
+        },
+        {
+          "guid": "-6"
+        },
+        {
+          "guid": "-7"
+        },
+        {
+          "guid": "-8"
+        }
+      ]
+    }
+  },
+  "referredEntities": {
+    "-2": {
+      "guid": "-2",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "socialProfileId",
+        "data_type": "entityId",
+        "length": 255,
+        "default_value": "",
+        "comment": "Unique Identifier of the social profile name.",
+        "isNullable": false,
+        "isPrimaryKey": true,
+        "qualifiedName": "accountsdb.socialprofile.socialprofileid@sqldb"
+      }
+    },
+    "-3": {
+      "guid": "-3",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "profileName",
+        "data_type": "string",
+        "length": 255,
+        "default_value": "",
+        "comment": "Name of the social profile on the corresponding social channel.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.socialprofile.profilename@sqldb"
+      }
+    },
+    "-4": {
+      "guid": "-4",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "blocked",
+        "data_type": "boolean",
+        "length": 1,
+        "default_value": "",
+        "comment": "Identifies if the social profile has been blocked.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.socialprofile.blocked@sqldb"
+      }
+    },
+    "-5": {
+      "guid": "-5",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "community",
+        "data_type": "listLookup",
+        "length": 255,
+        "default_value": "",
+        "comment": "Identifies where the social profile originated from, such as Twitter, or Facebook.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.socialprofile.community@sqldb"
+      }
+    },
+    "-6": {
+      "guid": "-6",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "influenceScore",
+        "data_type": "double",
+        "length": 100,
+        "default_value": "",
+        "comment": "Shows the score that determines the online social influence of the social profile.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.socialprofile.influencescore@sqldb"
+      }
+    },
+    "-7": {
+      "guid": "-7",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "profileLink",
+        "data_type": "string",
+        "length": 255,
+        "default_value": "",
+        "comment": "Shows the customer that this social profile belongs to.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.socialprofile.profilelink@sqldb"
+      }
+    },
+    "-8": {
+      "guid": "-8",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "uniqueProfileID",
+        "data_type": "string",
+        "length": 255,
+        "default_value": "",
+        "comment": "Unique ID of the Profile ID",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "accountsdb.socialprofile.uniqueprofileid@sqldb"
+      }
+    }
+  }
+}

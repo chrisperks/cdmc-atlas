@@ -1,0 +1,27 @@
+{
+  "entity": {
+    "guid": "-1",
+    "typeName": "aws_s3_bucket",
+    "attributes": {
+      "name": "raw_letter",
+      "description": "Activity that tracks the delivery of a letter. The activity can contain the electronic copy of the letter.",
+      "qualifiedName": "s3.letter@aws",
+      "name_path": "s3.letter@aws",
+      "createTime": 1607476058882,
+      "owner": "cperks@cdmc.sql",
+      "prodOrOther": "Non-production",
+      "comment": "",
+      "partner": "",
+      "domain": "s3.eu-west-2.amazonaws.com",
+      "region": "eu-west-2",
+      "s3AccessPolicies": [],
+      "isEncrypted": true,
+      "encryptionType": "SSE-KMS",
+      "lifeCycleRules": [],
+      "awsTags": [],
+      "cloudWatchMetrics": [],
+      "type": "Managed",
+      "contact_info": "Chris (cperks@cdmc.sql)"
+    }
+  }
+}

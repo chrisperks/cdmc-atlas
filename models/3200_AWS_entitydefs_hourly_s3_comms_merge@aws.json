@@ -1,0 +1,68 @@
+{
+  "entity": {
+    "typeName": "aws_glue_etl",
+    "attributes": {
+      "owner": "CPerks",
+      "outputs": [
+        {
+          "typeName": "aws_s3_bucket",
+          "uniqueAttributes": {
+            "qualifiedName": "s3.merged_all_communications@aws"
+          }
+        }
+      ],
+      "qualifiedName": "s3_etl_comms_hourly_merge@aws",
+      "displayName": null,
+      "inputs": [
+        {
+          "typeName": "aws_s3_bucket",
+          "uniqueAttributes": {
+            "qualifiedName": "s3.email@aws"
+          }
+        },
+        {
+          "typeName": "aws_s3_bucket",
+          "uniqueAttributes": {
+            "qualifiedName": "s3.fax@aws"
+          }
+        },
+        {
+          "typeName": "aws_s3_bucket",
+          "uniqueAttributes": {
+            "qualifiedName": "s3.feedback@aws"
+          }
+        },
+        {
+          "typeName": "aws_s3_bucket",
+          "uniqueAttributes": {
+            "qualifiedName": "s3.note@aws"
+          }
+        },
+        {
+          "typeName": "aws_s3_bucket",
+          "uniqueAttributes": {
+            "qualifiedName": "s3.letter@aws"
+          }
+        },
+        {
+          "typeName": "aws_s3_bucket",
+          "uniqueAttributes": {
+            "qualifiedName": "s3.phonecall@aws"
+          }
+        },
+        {
+          "typeName": "aws_s3_bucket",
+          "uniqueAttributes": {
+            "qualifiedName": "s3.socialactivity@aws"
+          }
+        }
+      ],
+      "description": "Hourly Merge of Communications",
+      "userName": null,
+      "name": "hourly_s3_comms_merge",
+      "startTime": 1618295176063,
+      "endTime": 1618295186063,
+      "processId": "dataMerge"
+    }
+  }
+}

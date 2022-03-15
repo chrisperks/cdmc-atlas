@@ -1,0 +1,168 @@
+{
+  "entity": {
+    "guid": "-1",
+    "typeName": "sqldb_table",
+    "attributes": {
+      "name": "article",
+      "description": "Structured content that is part of the knowledge base or external communications portal.",
+      "qualifiedName": "communicationsdb.article@sqldb",
+      "name_path": "communicationsdb.article@sqldb",
+      "createTime": 1607476058882,
+      "comment": "",
+      "type": "Managed",
+      "contact_info": "Chris (cperks@cdmc.sql)"
+    },
+    "relationshipAttributes": {
+      "db": {
+        "typeName": "sqldb_db",
+        "uniqueAttributes": {
+          "qualifiedName": "ASMSQL001.communicationsdb@sqldb"
+        }
+      },
+      "columns": [
+        {
+          "guid": "-2"
+        },
+        {
+          "guid": "-3"
+        },
+        {
+          "guid": "-4"
+        },
+        {
+          "guid": "-5"
+        },
+        {
+          "guid": "-6"
+        },
+        {
+          "guid": "-7"
+        },
+        {
+          "guid": "-8"
+        }
+      ]
+    }
+  },
+  "referredEntities": {
+    "-2": {
+      "guid": "-2",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "kbArticleId",
+        "data_type": "entityId",
+        "length": 255,
+        "default_value": "",
+        "comment": "ID of the article.",
+        "isNullable": false,
+        "isPrimaryKey": true,
+        "qualifiedName": "communicationsdb.article.kbarticleid@sqldb"
+      }
+    },
+    "-3": {
+      "guid": "-3",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "subjectId",
+        "data_type": "listLookup",
+        "length": 255,
+        "default_value": "",
+        "comment": "Subject of the article to assist with article searches.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "communicationsdb.article.subjectid@sqldb"
+      }
+    },
+    "-4": {
+      "guid": "-4",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "articleXml",
+        "data_type": "string",
+        "length": 1073741823,
+        "default_value": "",
+        "comment": "Article content and formatting, stored as XML.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "communicationsdb.article.articlexml@sqldb"
+      }
+    },
+    "-5": {
+      "guid": "-5",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "title",
+        "data_type": "string",
+        "length": 255,
+        "default_value": "",
+        "comment": "Subject or descriptive name for the article to assist with article searches.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "communicationsdb.article.title@sqldb"
+      }
+    },
+    "-6": {
+      "guid": "-6",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "content",
+        "data_type": "string",
+        "length": 1073741823,
+        "default_value": "",
+        "comment": "Description of the content of the knowledge base article.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "communicationsdb.article.content@sqldb"
+      }
+    },
+    "-7": {
+      "guid": "-7",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "description",
+        "data_type": "string",
+        "length": 2000,
+        "default_value": "",
+        "comment": "Additional information that describes the knowledge base article.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "communicationsdb.article.description@sqldb"
+      }
+    },
+    "-8": {
+      "guid": "-8",
+      "typeName": "sqldb_column",
+      "attributes": {
+        "table": {
+          "guid": "-1"
+        },
+        "name": "comments",
+        "data_type": "string",
+        "length": 100000,
+        "default_value": "",
+        "comment": "Comments regarding the knowledge base article.",
+        "isNullable": true,
+        "isPrimaryKey": false,
+        "qualifiedName": "communicationsdb.article.comments@sqldb"
+      }
+    }
+  }
+}
